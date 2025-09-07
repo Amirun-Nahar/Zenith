@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Responsive Base Styles */
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  @media (max-width: 640px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  /* Improve touch targets on mobile */
+  @media (max-width: 768px) {
+    button, 
+    [role="button"],
+    input,
+    select,
+    textarea {
+      min-height: 44px;
+      min-width: 44px;
+    }
+  }
+
+  /* Time input styling for better visibility */
+  input[type="time"] {
+    color-scheme: dark;
+  }
+  
+  input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.8;
+  }
+  
+  input[type="time"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
+}
+
+/* Responsive Container Classes */
+@layer components {
+  .container-fluid {
+    @apply w-full px-4 mx-auto;
+    max-width: 1280px;
+  }
+
+  .responsive-grid {
+    @apply grid gap-4;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .responsive-flex {
+    @apply flex flex-wrap gap-4;
+  }
+}
+
+/* Responsive Typography */
+@layer utilities {
+  .h1 {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  .h2 {
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+
+  .h3 {
+    @apply text-lg md:text-xl lg:text-2xl font-semibold;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg;
+  }
+
+  .text-small {
+    @apply text-sm md:text-base;
+  }
+}
+
+:root {
+	--background: 99 120 107;   /* #63786b - matching the textured background */
+	--foreground: 248 247 229;  /* #f8f7e5 - cream text for textured background */
+	--muted: 200 195 180;       /* muted cream for subtle text */
+	--surface: 248 247 229;     /* cream for cards/surfaces */
+	--border: 200 195 180;      /* muted cream for borders */
+	--primary: 99 120 107;      /* #63786b for primary actions */
+	--ring: 99 120 107;         /* #63786b ring */
+}
+
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html, body, #root { height: 100%; }
+body { 
+  color: rgb(var(--foreground)); 
+  transition: background-color .2s ease, color .2s ease; 
+  font-family: "Merriweather", serif; 
+}
+h1, h2, h3, h4 { font-family: "Merriweather", serif; }
+::selection { background-color: rgba(20,184,166,0.2); color: rgb(var(--foreground)); }
+
+a { color: rgb(var(--primary)); }
+a:hover { filter: brightness(1.1); }
+
+/* Modern button styles */
+.btn { 
+	@apply inline-flex items-center justify-center rounded-xl text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed; 
+	background: linear-gradient(135deg, rgba(99, 120, 107, 0.9) 0%, rgba(74, 92, 79, 0.9) 100%);
+	color: #f8f7e5; 
+	border: 1px solid rgba(248, 247, 229, 0.3);
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+	backdrop-filter: blur(12px);
+	position: relative;
+	overflow: hidden;
+	/* Enhanced touch targets */
+	@apply px-4 py-2 md:px-6 md:py-3;
+	@apply text-base md:text-sm;
+	/* Touch feedback */
+	@apply active:scale-95;
+	@apply md:active:scale-95;
+	/* Improved tap targets on mobile */
+	@apply min-h-[44px] md:min-h-[36px];
+	@apply min-w-[44px] md:min-w-[36px];
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+	transition: left 0.5s;
+}
+
+.btn:hover::before {
+	left: 100%;
+}
+
+.btn:hover { 
+	background: linear-gradient(135deg, rgba(99, 120, 107, 1) 0%, rgba(74, 92, 79, 1) 100%);
+	transform: translateY(-3px) scale(1.02);
+	box-shadow: 0 8px 25px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+	border-color: rgba(248, 247, 229, 0.5);
+}
+
+.btn:active {
+	transform: translateY(-1px) scale(0.98);
+	transition: all 0.1s;
+}
+
+.btn-primary { 
+	background: linear-gradient(135deg, #63786b 0%, #4a5c4f 100%);
+	color: #f8f7e5; 
+	border: 1px solid rgba(248, 247, 229, 0.4); 
+	box-shadow: 0 4px 15px rgba(99, 120, 107, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.btn-primary:hover { 
+	background: linear-gradient(135deg, #4a5c4f 0%, #3d4d40 100%);
+	transform: translateY(-3px) scale(1.02);
+	box-shadow: 0 8px 25px rgba(99, 120, 107, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+	border-color: rgba(248, 247, 229, 0.6);
+}
+
+/* Modern danger button */
+.btn-danger {
+	background: linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(220, 38, 38, 0.9) 100%);
+	color: #f8f7e5;
+	border: 1px solid rgba(239, 68, 68, 0.3);
+	box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.btn-danger:hover {
+	background: linear-gradient(135deg, rgba(239, 68, 68, 1) 0%, rgba(220, 38, 38, 1) 100%);
+	transform: translateY(-3px) scale(1.02);
+	box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+	border-color: rgba(239, 68, 68, 0.5);
+}
+
+/* Modern success button */
+.btn-success {
+	background: linear-gradient(135deg, rgba(34, 197, 94, 0.9) 0%, rgba(22, 163, 74, 0.9) 100%);
+	color: #f8f7e5;
+	border: 1px solid rgba(34, 197, 94, 0.3);
+	box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.btn-success:hover {
+	background: linear-gradient(135deg, rgba(34, 197, 94, 1) 0%, rgba(22, 163, 74, 1) 100%);
+	transform: translateY(-3px) scale(1.02);
+	box-shadow: 0 8px 25px rgba(34, 197, 94, 0.3), inset 0 1px 0 rgba(255,255,255,0.2);
+	border-color: rgba(34, 197, 94, 0.5);
+}
+
+.input, textarea, select { 
+	@apply w-full rounded-lg text-sm focus:outline-none focus:ring-2; 
+	border: 2px solid rgba(var(--border),0.3); 
+	background-color: rgba(31, 41, 55, 0.8); 
+	color: rgb(var(--foreground)); 
+	box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+	backdrop-filter: blur(10px);
+	transition: all 0.2s ease;
+	/* Enhanced touch targets */
+	@apply px-3 py-2 md:px-4 md:py-3;
+	@apply text-base md:text-sm;
+}
+
+/* Touch-friendly focus states */
+.input:focus, textarea:focus, select:focus {
+	@apply ring-2;
+	border-color: rgb(var(--primary));
+	box-shadow: 0 0 0 3px rgba(var(--primary), 0.2);
+	opacity: 0.9;
+}
+
+/* Touch feedback on mobile */
+@media (max-width: 768px) {
+	.input:active, textarea:active, select:active {
+		transform: scale(0.99);
+	}
+}
+
+.input::placeholder, textarea::placeholder { 
+	color: rgba(var(--muted),0.7); 
+}
+
+/* Date input specific styling */
+input[type="date"] {
+	background-color: rgba(99, 120, 107, 0.1) !important;
+	color: #f8f7e5 !important;
+	border: 2px solid rgba(248, 247, 229, 0.3) !important;
+}
+
+input[type="date"]:focus {
+	border-color: rgba(248, 247, 229, 0.6) !important;
+	box-shadow: 0 0 0 3px rgba(248, 247, 229, 0.1) !important;
+}
+
+/* Date picker calendar styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+	filter: invert(1);
+	opacity: 0.8;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+	opacity: 1;
+}
+
+.input:focus, textarea:focus, select:focus { 
+	border-color: rgb(var(--primary));
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+	background-color: rgba(31, 41, 55, 0.9);
+}
+
+.input:hover, textarea:hover, select:hover {
+	border-color: rgba(var(--border),0.5);
+	background-color: rgba(31, 41, 55, 0.9);
+}
+
+/* Ensure select dropdowns are visible */
+select {
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23f8f7e5' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+	background-position: right 8px center;
+	background-repeat: no-repeat;
+	background-size: 16px;
+	padding-right: 32px;
+}
+
+select option {
+	background-color: #2d3748 !important;
+	color: #f8f7e5 !important;
+	padding: 12px 16px !important;
+	border: none !important;
+	font-size: 14px !important;
+}
+
+select option:hover {
+	background-color: #4a5568 !important;
+}
+
+select option:checked {
+	background-color: #63786b !important;
+	color: #f8f7e5 !important;
+}
+
+/* Textarea specific styling */
+textarea {
+	resize: vertical;
+	min-height: 80px;
+}
+
+.card { 
+	border: 1px solid rgba(248, 247, 229, 0.2); 
+	background-color: rgba(248, 247, 229, 0.1); 
+	@apply rounded-2xl shadow-lg backdrop-blur-md; 
+	color: #f8f7e5; 
+	box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* Mobile and Responsive Utilities */
+.shadow-elev { box-shadow: 0 1px 2px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.14); }
+
+/* Safe Area Insets */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 1rem);
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  height: calc(100vh - env(safe-area-inset-bottom, 0px));
+  @apply overflow-y-auto overscroll-contain;
+}
+
+/* Mobile Grid */
+.mobile-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4;
+}
+
+/* Mobile Touch Targets */
+.touch-target {
+  @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+}
+
+/* Mobile Scrolling */
+.mobile-scroll {
+  @apply overflow-x-auto overscroll-x-contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.mobile-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Mobile Text */
+.mobile-text {
+  @apply text-base sm:text-sm leading-relaxed;
+}
+
+/* Mobile Cards */
+.mobile-card {
+  @apply p-4 sm:p-6 rounded-2xl;
+}
+
+/* Mobile Spacing */
+.mobile-space-y {
+  @apply space-y-4 sm:space-y-6;
+}
+
+.mobile-space-x {
+  @apply space-x-3 sm:space-x-4;
+}
+
+/* Mobile Buttons */
+.mobile-btn {
+  @apply w-full sm:w-auto justify-center;
+}
+
+/* Mobile Lists */
+.mobile-list {
+  @apply divide-y divide-white/10;
+}
+
+/* Mobile Forms */
+.mobile-form {
+  @apply space-y-4 sm:space-y-6;
+}
+
+/* Mobile Headings */
+.mobile-heading {
+  @apply text-xl sm:text-2xl font-bold;
+}
+
+/* Mobile Sections */
+.mobile-section {
+  @apply py-4 sm:py-6;
+}
+
+/* Mobile Container */
+.mobile-container {
+  @apply px-4 sm:px-6 mx-auto max-w-7xl;
+}
+
+/* High-contrast overrides for legacy gray utilities used in components */
+.text-gray-700 { color: rgb(var(--foreground)) !important; }
+.text-gray-600 { color: rgba(var(--muted), 1) !important; }
+.text-gray-500 { color: rgba(var(--muted), 0.8) !important; }
+.text-gray-400 { color: rgba(var(--muted), 0.6) !important; }
+
+.border-gray-200 { border-color: rgba(var(--border),0.35) !important; }
+.border-gray-300 { border-color: rgba(var(--border),0.55) !important; }
+
+.bg-white\/5 { background-color: rgba(255,255,255,0.05) !important; }
+.bg-white\/10 { background-color: rgba(255,255,255,0.10) !important; }
+.hover\:bg-gray-50:hover { background-color: rgba(31, 41, 55, 0.9) !important; }
