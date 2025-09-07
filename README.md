@@ -6,7 +6,7 @@ A comprehensive, modern web application designed to empower students with AI-dri
 
 ## 🌟 Overview
 
-Zenith is a full-stack academic productivity platform that leverages Google Gemini AI to provide intelligent insights, automated scheduling, and personalized study recommendations. The application features a modern, responsive design with UNDP blue and white color scheme, ensuring accessibility and professional aesthetics across all devices.
+Zenith is a full-stack academic productivity platform that leverages Google Gemini AI to provide intelligent insights, automated scheduling, and personalized study recommendations. The application features a modern, responsive design ensuring accessibility and professional aesthetics across all devices.
 
 ## 🚀 Key Features
 
@@ -99,7 +99,6 @@ Zenith is a full-stack academic productivity platform that leverages Google Gemi
 ### 💫 User Experience & Design
 
 #### Modern, Responsive Interface
-- **UNDP Color Scheme**: Professional blue and white design following UNDP branding guidelines
 - **Mobile-First Design**: Optimized for all screen sizes from mobile to desktop
 - **Touch-Friendly**: Large buttons and intuitive touch interactions
 - **Accessibility Features**: High contrast, keyboard navigation, and screen reader support
@@ -122,7 +121,7 @@ Zenith is a full-stack academic productivity platform that leverages Google Gemi
 ### Frontend Architecture
 - **Framework**: React 18.2.0 with modern hooks and functional components
 - **Build Tool**: Vite 7.1.4 for fast development and optimized production builds
-- **Styling**: Tailwind CSS 3.3.2 with custom UNDP theme and responsive design
+- **Styling**: Tailwind CSS 3.3.2 with custom theme and responsive design
 - **State Management**: React Context API for global state management
 - **Routing**: React Router v6.4.0 with protected routes and lazy loading
 - **Authentication**: JWT tokens with secure HTTP-only cookie fallback
