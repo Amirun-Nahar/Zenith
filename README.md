@@ -6,7 +6,7 @@ A comprehensive, modern web application designed to empower students with AI-dri
 
 ## 🌟 Overview
 
-Zenith is a full-stack academic productivity platform that leverages Google Gemini AI to provide intelligent insights, automated scheduling, and personalized study recommendations. The application features a modern, responsive design with a warm, accessible 3-color palette (warm beige background, vibrant red-orange text, and golden yellow accents), ensuring excellent readability and professional aesthetics across all devices.
+Zenith is a full-stack academic productivity platform that leverages Google Gemini AI to provide intelligent insights, automated scheduling, and personalized study recommendations. The application features a modern, responsive design with a sophisticated, accessible 4-color palette (dark blue background, light cream text, light mint buttons, and steel blue accents), ensuring excellent readability and professional aesthetics across all devices.
 
 ## 🚀 Key Features
 
@@ -99,9 +99,10 @@ Zenith is a full-stack academic productivity platform that leverages Google Gemi
 ### 💫 User Experience & Design
 
 #### Color Scheme & Accessibility
-- **Background Color**: Warm beige (#EBE9E1) - Provides a comfortable, non-straining background for extended use
-- **Text Color**: Vibrant red-orange (#E43D12) - Ensures excellent readability and high contrast against the beige background
-- **Accent Color**: Golden yellow (#EFB11D) - Used for buttons, borders, and interactive elements to create visual hierarchy
+- **Background Color**: Dark blue (#19183B) - Provides a sophisticated, modern background that reduces eye strain
+- **Text/Font Color**: Light cream (#F5EFE6) - Ensures excellent readability with high contrast against the dark background
+- **Button Color**: Light mint (#E7F2EF) - Used for interactive elements to create clear call-to-actions
+- **Accent/Border Color**: Steel blue (#6D94C5) - Used for borders and accents to create visual hierarchy and depth
 - **WCAG Compliance**: All color combinations meet WCAG AA standards for accessibility
 - **High Contrast**: Text-to-background contrast ratios exceed 4.5:1 for normal text and 3:1 for large text
 
@@ -128,7 +129,7 @@ Zenith is a full-stack academic productivity platform that leverages Google Gemi
 ### Frontend Architecture
 - **Framework**: React 18.2.0 with modern hooks and functional components
 - **Build Tool**: Vite 7.1.4 for fast development and optimized production builds
-- **Styling**: Tailwind CSS 3.3.2 with custom warm 3-color theme and responsive design
+- **Styling**: Tailwind CSS 3.3.2 with custom sophisticated 4-color theme and responsive design
 - **State Management**: React Context API for global state management
 - **Routing**: React Router v6.4.0 with protected routes and lazy loading
 - **Authentication**: JWT tokens with secure HTTP-only cookie fallback
