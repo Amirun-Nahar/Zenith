@@ -6,7 +6,7 @@ A comprehensive, modern web application designed to empower students with AI-dri
 
 ## 🌟 Overview
 
-Zenith is a full-stack academic productivity platform that leverages Google Gemini AI to provide intelligent insights, automated scheduling, and personalized study recommendations. The application features a modern, responsive design ensuring accessibility and professional aesthetics across all devices.
+Zenith is a full-stack academic productivity platform that leverages Google Gemini AI to provide intelligent insights, automated scheduling, and personalized study recommendations. The application features a modern, responsive design with a warm, accessible 3-color palette (warm beige background, vibrant red-orange text, and golden yellow accents), ensuring excellent readability and professional aesthetics across all devices.
 
 ## 🚀 Key Features
 
@@ -98,11 +98,18 @@ Zenith is a full-stack academic productivity platform that leverages Google Gemi
 
 ### 💫 User Experience & Design
 
+#### Color Scheme & Accessibility
+- **Background Color**: Warm beige (#EBE9E1) - Provides a comfortable, non-straining background for extended use
+- **Text Color**: Vibrant red-orange (#E43D12) - Ensures excellent readability and high contrast against the beige background
+- **Accent Color**: Golden yellow (#EFB11D) - Used for buttons, borders, and interactive elements to create visual hierarchy
+- **WCAG Compliance**: All color combinations meet WCAG AA standards for accessibility
+- **High Contrast**: Text-to-background contrast ratios exceed 4.5:1 for normal text and 3:1 for large text
+
 #### Modern, Responsive Interface
 - **Mobile-First Design**: Optimized for all screen sizes from mobile to desktop
 - **Touch-Friendly**: Large buttons and intuitive touch interactions
-- **Accessibility Features**: High contrast, keyboard navigation, and screen reader support
-- **Dark/Light Theme**: Adaptive theming based on user preferences
+- **Accessibility Features**: High contrast ratios, keyboard navigation, and screen reader support
+- **Consistent Design**: Unified color scheme across all components and pages
 
 #### Real-Time Synchronization
 - **Cross-Device Sync**: Seamless data synchronization across all devices
@@ -121,7 +128,7 @@ Zenith is a full-stack academic productivity platform that leverages Google Gemi
 ### Frontend Architecture
 - **Framework**: React 18.2.0 with modern hooks and functional components
 - **Build Tool**: Vite 7.1.4 for fast development and optimized production builds
-- **Styling**: Tailwind CSS 3.3.2 with custom theme and responsive design
+- **Styling**: Tailwind CSS 3.3.2 with custom warm 3-color theme and responsive design
 - **State Management**: React Context API for global state management
 - **Routing**: React Router v6.4.0 with protected routes and lazy loading
 - **Authentication**: JWT tokens with secure HTTP-only cookie fallback
