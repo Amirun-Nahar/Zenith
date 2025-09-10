@@ -3,9 +3,9 @@ import { useRef, useEffect } from 'react'
 const Squares = ({
   direction = 'right',
   speed = 1,
-  borderColor = '#999',
+  borderColor = '#6D94C5',
   squareSize = 40,
-  hoverFillColor = '#222',
+  hoverFillColor = '#19183B',
 }) => {
   const canvasRef = useRef(null)
   const requestRef = useRef(null)
@@ -64,8 +64,8 @@ const Squares = ({
         canvas.height / 2,
         Math.sqrt(canvas.width ** 2 + canvas.height ** 2) / 2
       )
-      gradient.addColorStop(0, 'rgba(242, 217, 238, 0)')
-      gradient.addColorStop(1, '#F2D9EE')
+      gradient.addColorStop(0, 'rgba(109, 148, 197, 0)')
+      gradient.addColorStop(1, '#6D94C5')
 
       ctx.fillStyle = gradient
       ctx.fillRect(0, 0, canvas.width, canvas.height)

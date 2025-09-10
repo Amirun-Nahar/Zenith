@@ -45,8 +45,8 @@ export default function AIDashboard() {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h1 className="text-3xl font-bold mb-2" style={{ color: '#E43D12' }}>AI-Powered Insights</h1>
-        <p style={{ color: '#E43D12', opacity: 0.8 }}>Your personal AI assistant for academic success</p>
+        <h1 className="text-3xl font-bold mb-2" style={{ color: '#E7F2EF' }}>AI-Powered Insights</h1>
+        <p style={{ color: '#E7F2EF', opacity: 0.8 }}>Your personal AI assistant for academic success</p>
       </div>
 
       {/* Tab Navigation */}
@@ -59,8 +59,8 @@ export default function AIDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-shrink-0 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 border-2 ${
                 activeTab === tab.id
-                  ? 'bg-[#EFB11D] text-[#EBE9E1] border-[#EFB11D] shadow-lg'
-                  : 'bg-transparent text-[#E43D12] border-transparent hover:bg-[#EFB11D]/20 hover:border-[#EFB11D]/30 hover:shadow-md'
+                  ? 'bg-[#708993] text-[#19183B] border-[#708993] shadow-lg'
+                  : 'bg-transparent text-[#E7F2EF] border-transparent hover:bg-[#708993]/20 hover:border-[#708993]/30 hover:shadow-md'
               }`}
             >
               <span className="mr-1">{tab.icon}</span>
@@ -77,8 +77,8 @@ export default function AIDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-200 border-2 ${
                 activeTab === tab.id
-                  ? 'bg-[#EFB11D] text-[#EBE9E1] border-[#EFB11D] shadow-lg'
-                  : 'bg-transparent text-[#E43D12] border-transparent hover:bg-[#EFB11D]/20 hover:border-[#EFB11D]/30 hover:shadow-md'
+                  ? 'bg-[#708993] text-[#19183B] border-[#708993] shadow-lg'
+                  : 'bg-transparent text-[#E7F2EF] border-transparent hover:bg-[#708993]/20 hover:border-[#708993]/30 hover:shadow-md'
               }`}
             >
               <span className="mr-2">{tab.icon}</span>
@@ -114,26 +114,26 @@ function StudyInsights({ insights }) {
   return (
     <div className="space-y-4">
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>📊 Study Performance Analysis</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E7F2EF' }}>📊 Study Performance Analysis</h3>
         {insights.length > 0 ? (
           <div className="space-y-3">
             {insights.map((insight, index) => (
               <div
                 key={index}
                 className={`p-4 rounded-lg border-l-4 ${
-                  insight.priority === 'high' ? 'border-red-400' :
-                  insight.priority === 'medium' ? 'border-yellow-400' :
-                  'border-emerald-400'
+                  insight.priority === 'high' ? 'border-[#708993]' :
+                  insight.priority === 'medium' ? 'border-[#708993]' :
+                  'border-[#708993]'
                 }`}
-                style={{ backgroundColor: '#EBE9E1' }}
+                style={{ backgroundColor: '#19183B' }}
               >
-                <p className="mb-2" style={{ color: '#E43D12' }}>{insight.message}</p>
-                <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>{insight.action}</p>
+                <p className="mb-2" style={{ color: '#E7F2EF' }}>{insight.message}</p>
+                <p className="text-sm" style={{ color: '#E7F2EF', opacity: 0.8 }}>{insight.action}</p>
               </div>
             ))}
           </div>
         ) : (
-          <p style={{ color: '#E43D12', opacity: 0.8 }}>Complete some tasks to get personalized study insights!</p>
+          <p style={{ color: '#E7F2EF', opacity: 0.8 }}>Complete some tasks to get personalized study insights!</p>
         )}
       </div>
     </div>
@@ -346,8 +346,8 @@ function BudgetInsights() {
     return (
       <div className="space-y-4">
         <div className="card p-6 border border-red-500/30">
-          <h3 className="text-xl font-semibold text-red-600 mb-4">❌ Error Loading Budget Data</h3>
-                            <p className="mb-4" style={{ color: '#E43D12', opacity: 0.8 }}>{error}</p>
+          <h3 className="text-xl font-semibold text-[#E7F2EF] mb-4">❌ Error Loading Budget Data</h3>
+                            <p className="mb-4" style={{ color: '#E7F2EF', opacity: 0.8 }}>{error}</p>
           <button 
             onClick={fetchBudgetData}
             className="btn btn-primary"
@@ -366,65 +366,65 @@ function BudgetInsights() {
               <div
                 className="card p-3 md:p-4 text-center"
               >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>${summary.totalIncome}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Income</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E7F2EF' }}>${summary.totalIncome}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>Income</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>${summary.totalExpense}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Expenses</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E7F2EF' }}>${summary.totalExpense}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>Expenses</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>{summary.savingsRate}%</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Savings</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E7F2EF' }}>{summary.savingsRate}%</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>Savings</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>{summary.transactionCount}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Transactions</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E7F2EF' }}>{summary.transactionCount}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>Transactions</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center sm:col-span-1"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>{summary.categoryCount}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Categories</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E7F2EF' }}>{summary.categoryCount}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>Categories</p>
           </div>
         </div>
       )}
       
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>💡 AI Budget Recommendations</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E7F2EF' }}>💡 AI Budget Recommendations</h3>
         {insights.length > 0 ? (
           <div className="space-y-3">
             {insights.map((insight, index) => (
               <div
                 key={index}
                 className={`p-4 rounded-lg border-l-4 ${
-                  insight.type === 'success' ? 'border-emerald-400' :
-                  insight.type === 'warning' ? 'border-yellow-400' :
-                  insight.type === 'danger' ? 'border-red-400' :
-                  insight.type === 'caution' ? 'border-orange-400' :
-                  insight.type === 'info' ? 'border-blue-400' :
-                  insight.type === 'diversity' ? 'border-purple-400' :
-                  insight.type === 'pattern' ? 'border-indigo-400' :
-                  insight.type === 'goal' ? 'border-emerald-400' :
-                  'border-gray-300'
+                  insight.type === 'success' ? 'border-[#708993]' :
+                  insight.type === 'warning' ? 'border-[#708993]' :
+                  insight.type === 'danger' ? 'border-[#708993]' :
+                  insight.type === 'caution' ? 'border-[#708993]' :
+                  insight.type === 'info' ? 'border-[#708993]' :
+                  insight.type === 'diversity' ? 'border-[#708993]' :
+                  insight.type === 'pattern' ? 'border-[#708993]' :
+                  insight.type === 'goal' ? 'border-[#708993]' :
+                  'border-[#708993]'
                 }`}
-                style={{ backgroundColor: '#EBE9E1' }}
+                style={{ backgroundColor: '#19183B' }}
               >
                 <div className="flex items-start gap-3">
                   <span className={`text-lg ${
-                    insight.type === 'success' ? 'text-green-600' :
-                    insight.type === 'warning' ? 'text-yellow-600' :
-                    insight.type === 'danger' ? 'text-red-600' :
-                    insight.type === 'caution' ? 'text-orange-600' :
-                    insight.type === 'info' ? 'text-blue-600' :
-                    insight.type === 'diversity' ? 'text-purple-600' :
-                    insight.type === 'pattern' ? 'text-indigo-600' :
+                    insight.type === 'success' ? 'text-[#E7F2EF]' :
+                    insight.type === 'warning' ? 'text-[#E7F2EF]' :
+                    insight.type === 'danger' ? 'text-[#E7F2EF]' :
+                    insight.type === 'caution' ? 'text-[#E7F2EF]' :
+                    insight.type === 'info' ? 'text-[#E7F2EF]' :
+                    insight.type === 'diversity' ? 'text-[#E7F2EF]' :
+                    insight.type === 'pattern' ? 'text-[#E7F2EF]' :
                     insight.type === 'goal' ? 'text-emerald-600' :
                     'text-gray-400'
                   }`}>
@@ -439,15 +439,15 @@ function BudgetInsights() {
                      '💡'}
                   </span>
                   <div className="flex-1">
-                    <p className="mb-2" style={{ color: '#E43D12' }}>{insight.message}</p>
-                    <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>{insight.recommendation}</p>
+                    <p className="mb-2" style={{ color: '#E7F2EF' }}>{insight.message}</p>
+                    <p className="text-sm" style={{ color: '#E7F2EF', opacity: 0.8 }}>{insight.recommendation}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p style={{ color: '#E43D12', opacity: 0.8 }}>Add some transactions to get AI budget insights!</p>
+          <p style={{ color: '#E7F2EF', opacity: 0.8 }}>Add some transactions to get AI budget insights!</p>
         )}
       </div>
     </div>
@@ -497,7 +497,7 @@ function SmartSchedule() {
   return (
     <div className="space-y-4">
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>⏰ AI Planner Optimization</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E7F2EF' }}>⏰ AI Planner Optimization</h3>
         
         <div className="mb-4 space-y-2">
           <button
@@ -508,7 +508,7 @@ function SmartSchedule() {
             {loading ? 'Optimizing...' : 'Optimize My Planner'}
           </button>
           
-          <div className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
+          <div className="text-sm" style={{ color: '#E7F2EF', opacity: 0.8 }}>
             <p>📋 Found {tasks.length} incomplete tasks</p>
             <p>🔄 {loading ? 'Processing...' : 'Ready to optimize'}</p>
           </div>
@@ -516,8 +516,8 @@ function SmartSchedule() {
 
         {tasks.length === 0 && (
           <div className="card p-4 border border-yellow-500/30">
-            <p className="text-yellow-600 text-sm font-medium">⚠️ No tasks found</p>
-            <p className="text-xs mt-1" style={{ color: '#E43D12', opacity: 0.7 }}>
+            <p className="text-[#E7F2EF] text-sm font-medium">⚠️ No tasks found</p>
+            <p className="text-xs mt-1" style={{ color: '#E7F2EF', opacity: 0.7 }}>
               Go to the Planner page and create some tasks first, then come back to optimize your schedule!
             </p>
           </div>
@@ -527,7 +527,7 @@ function SmartSchedule() {
           <div className="space-y-4">
             <div className="card p-4 border border-green-500/30">
               <p className="text-green-700 text-sm font-medium">✨ AI has optimized your schedule!</p>
-                          <p className="text-xs mt-1" style={{ color: '#E43D12', opacity: 0.7 }}>
+                          <p className="text-xs mt-1" style={{ color: '#E7F2EF', opacity: 0.7 }}>
               {availableSlots} available time slots • {optimizedSchedule.length} tasks scheduled
             </p>
             </div>
@@ -541,21 +541,21 @@ function SmartSchedule() {
                   item.priority === 'medium' ? 'border-yellow-500' :
                   'border-green-500'
                 }`}
-                style={{ backgroundColor: '#EBE9E1' }}
+                style={{ backgroundColor: '#19183B' }}
               >
                   <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-semibold" style={{ color: '#E43D12' }}>{item.task}</h4>
+                    <h4 className="font-semibold" style={{ color: '#E7F2EF' }}>{item.task}</h4>
                     <span className={`text-xs px-2 py-1 rounded ${
                       item.priority === 'high' ? 'text-red-800' :
                       item.priority === 'medium' ? 'text-orange-700' :
                       'text-emerald-700'
                     }`}
-                    style={{ backgroundColor: '#EBE9E1' }}>
+                    style={{ backgroundColor: '#19183B' }}>
                       {item.priority}
                     </span>
                   </div>
-                  <p className="text-sm mb-2" style={{ color: '#E43D12', opacity: 0.8 }}>{item.subject}</p>
-                  <div className="space-y-1 text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>
+                  <p className="text-sm mb-2" style={{ color: '#E7F2EF', opacity: 0.8 }}>{item.subject}</p>
+                  <div className="space-y-1 text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>
                     <p>📅 {item.dayName} at {item.hour}:00</p>
                     <p>⏱️ {item.estimatedDuration}</p>
                     <p>⏰ Due: {new Date(item.deadline).toLocaleDateString()}</p>
@@ -569,7 +569,7 @@ function SmartSchedule() {
                 <h4 className="text-blue-700 text-sm font-medium mb-2">💡 AI Recommendations</h4>
                 <ul className="space-y-1">
                   {recommendations.map((rec, index) => (
-                    <li key={index} className="text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>• {rec}</li>
+                    <li key={index} className="text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>• {rec}</li>
                   ))}
                 </ul>
               </div>
@@ -613,14 +613,14 @@ function AIStudyBuddy() {
   return (
     <div className="space-y-4">
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>🤖 AI Study Buddy</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E7F2EF' }}>🤖 AI Study Buddy</h3>
         
         {/* Chat History */}
         <div className="h-[50vh] md:h-64 overflow-y-auto mb-4 space-y-3 px-2">
           {chatHistory.length === 0 ? (
             <div className="text-center py-8">
-              <p className="mb-2 text-sm md:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Ask me anything about studying, scheduling, or budgeting!</p>
-              <p className="text-[10px] md:text-xs" style={{ color: '#E43D12' }}>🤖 Powered by Gemini AI</p>
+              <p className="mb-2 text-sm md:text-base" style={{ color: '#E7F2EF', opacity: 0.8 }}>Ask me anything about studying, scheduling, or budgeting!</p>
+              <p className="text-[10px] md:text-xs" style={{ color: '#E7F2EF' }}>🤖 Powered by Gemini AI</p>
             </div>
           ) : (
             chatHistory.map((msg, index) => (
@@ -636,9 +636,9 @@ function AIStudyBuddy() {
                   }`}
                 >
                   <div className="flex items-start justify-between gap-2">
-                    <p className="text-sm break-words" style={{ color: '#E43D12' }}>{msg.text}</p>
+                    <p className="text-sm break-words" style={{ color: '#E7F2EF' }}>{msg.text}</p>
                     {msg.isAI && (
-                      <span className="text-[10px] md:text-xs text-green-600 flex-shrink-0">🤖 AI</span>
+                      <span className="text-[10px] md:text-xs text-[#E7F2EF] flex-shrink-0">🤖 AI</span>
                     )}
                   </div>
                   {msg.suggestions && (
@@ -647,7 +647,7 @@ function AIStudyBuddy() {
                         <button
                           key={i}
                           onClick={() => setMessage(suggestion)}
-                          className="block text-[10px] md:text-xs text-blue-600 hover:text-blue-500 text-left"
+                          className="block text-[10px] md:text-xs text-[#E7F2EF] hover:text-blue-500 text-left"
                         >
                           💡 {suggestion}
                         </button>
@@ -660,7 +660,7 @@ function AIStudyBuddy() {
           )}
           {loading && (
             <div className="flex justify-start">
-              <div className="card p-3" style={{ color: '#E43D12' }}>
+              <div className="card p-3" style={{ color: '#E7F2EF' }}>
                 <p className="text-sm">🤔 Thinking...</p>
               </div>
             </div>
@@ -675,7 +675,7 @@ function AIStudyBuddy() {
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
             className="flex-1 input"
-            style={{ color: '#E43D12' }}
+            style={{ color: '#E7F2EF' }}
             placeholder="Ask your AI study buddy..."
           />
           <button

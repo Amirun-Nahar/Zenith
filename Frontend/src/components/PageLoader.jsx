@@ -9,7 +9,7 @@ export function PageLoader() {
         className="text-center"
       >
         <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-        <p className="text-[#E43D12] opacity-80">Loading...</p>
+        <p className="text-[#F5EFE6] opacity-80">Loading...</p>
       </motion.div>
     </div>
   );

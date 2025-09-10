@@ -8,7 +8,7 @@ export default function Schedule() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
-  const [form, setForm] = useState({ subject: '', instructor: '', day: 'Mon', startTime: '', endTime: '', color: '#3b82f6' })
+  const [form, setForm] = useState({ subject: '', instructor: '', day: 'Mon', startTime: '', endTime: '', color: '#6D94C5' })
 
   async function load() {
     setLoading(true)
@@ -58,7 +58,7 @@ export default function Schedule() {
     }
     try {
       await api.post('/api/classes', form)
-      setForm({ subject: '', instructor: '', day: 'Mon', startTime: '', endTime: '', color: '#3b82f6' })
+      setForm({ subject: '', instructor: '', day: 'Mon', startTime: '', endTime: '', color: '#6D94C5' })
       load()
     } catch (e) {
       setError(e.message)
@@ -77,15 +77,15 @@ export default function Schedule() {
   return (
     <div className="space-y-5 sm:space-y-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-xl sm:text-2xl font-semibold" style={{ color: '#E43D12' }}>Class Schedule</h1>
+        <h1 className="text-xl sm:text-2xl font-semibold" style={{ color: '#F5EFE6' }}>Class Schedule</h1>
       </div>
 
       <div className="grid md:grid-cols-[1fr_1fr] gap-4 sm:gap-6">
         <div className="card p-4 sm:p-6">
-          <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#E43D12' }}>Add Class</h2>
+          <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#F5EFE6' }}>Add Class</h2>
           <form onSubmit={submit} className="grid grid-cols-2 gap-3 sm:gap-4">
             <div className="col-span-2 space-y-1 sm:space-y-2">
-              <label className="text-sm block" style={{ color: '#E43D12' }}>Subject</label>
+              <label className="text-sm block" style={{ color: '#F5EFE6' }}>Subject</label>
               <input 
                 className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
                 name="subject" 
@@ -95,7 +95,7 @@ export default function Schedule() {
               />
             </div>
             <div className="space-y-1 sm:space-y-2">
-              <label className="text-sm block" style={{ color: '#E43D12' }}>Instructor</label>
+              <label className="text-sm block" style={{ color: '#F5EFE6' }}>Instructor</label>
               <input 
                 className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
                 name="instructor" 
@@ -104,7 +104,7 @@ export default function Schedule() {
               />
             </div>
             <div className="space-y-1 sm:space-y-2">
-              <label className="text-sm block" style={{ color: '#E43D12' }}>Day</label>
+              <label className="text-sm block" style={{ color: '#F5EFE6' }}>Day</label>
               <select 
                 className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
                 name="day" 
@@ -115,7 +115,7 @@ export default function Schedule() {
               </select>
             </div>
             <div className="space-y-1 sm:space-y-2">
-              <label className="text-sm block" style={{ color: '#E43D12' }}>Start Time</label>
+              <label className="text-sm block" style={{ color: '#F5EFE6' }}>Start Time</label>
               <input 
                 className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
                 type="time"
@@ -130,7 +130,7 @@ export default function Schedule() {
               />
             </div>
             <div className="space-y-1 sm:space-y-2">
-              <label className="text-sm block" style={{ color: '#E43D12' }}>End Time</label>
+              <label className="text-sm block" style={{ color: '#F5EFE6' }}>End Time</label>
               <input 
                 className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
                 type="time"
@@ -145,7 +145,7 @@ export default function Schedule() {
               />
             </div>
             <div className="space-y-1 sm:space-y-2">
-              <label className="text-sm block" style={{ color: '#E43D12' }}>Color</label>
+              <label className="text-sm block" style={{ color: '#F5EFE6' }}>Color</label>
               <input 
                 className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
                 type="color" 
@@ -162,9 +162,9 @@ export default function Schedule() {
         </div>
 
         <div className="card p-4 sm:p-6">
-          <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#E43D12' }}>Weekly View</h2>
+          <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#F5EFE6' }}>Weekly View</h2>
           {loading ? (
-            <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Loading…</p>
+            <p className="text-sm sm:text-base" style={{ color: '#F5EFE6', opacity: 0.8 }}>Loading…</p>
           ) : (
             <div className="space-y-4 sm:space-y-3">
               {DAYS.map((d) => (
@@ -181,10 +181,10 @@ export default function Schedule() {
 function DayRow({ day, items, onRemove }) {
   return (
     <div>
-      <div className="text-sm font-medium mb-1.5 sm:mb-1" style={{ color: '#E43D12' }}>{day}</div>
+      <div className="text-sm font-medium mb-1.5 sm:mb-1" style={{ color: '#F5EFE6' }}>{day}</div>
       <div className="flex flex-wrap gap-2">
         {items.length === 0 && (
-          <span className="text-xs sm:text-sm" style={{ color: '#E43D12', opacity: 0.7 }}>No classes</span>
+          <span className="text-xs sm:text-sm" style={{ color: '#F5EFE6', opacity: 0.7 }}>No classes</span>
         )}
         {items.map((c) => (
           <div 
@@ -194,9 +194,9 @@ function DayRow({ day, items, onRemove }) {
           >
             <div className="flex items-center gap-2 min-w-0">
               <span className="inline-block h-2 sm:h-2.5 w-2 sm:w-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: c.color }} />
-              <span className="text-sm font-medium truncate" style={{ color: '#E43D12' }}>{c.subject}</span>
+              <span className="text-sm font-medium truncate" style={{ color: '#F5EFE6' }}>{c.subject}</span>
             </div>
-            <div className="flex items-center gap-1.5 sm:gap-2 text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>
+            <div className="flex items-center gap-1.5 sm:gap-2 text-xs" style={{ color: '#F5EFE6', opacity: 0.7 }}>
               <span>{c.startTime}–{c.endTime}</span>
               {c.instructor && (
                 <>

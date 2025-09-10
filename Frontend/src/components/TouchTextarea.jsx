@@ -32,7 +32,7 @@ export const TouchTextarea = forwardRef(({
   return (
     <div className="space-y-1">
       {label && (
-        <label className="block text-sm font-medium text-[#E43D12] opacity-90">
+        <label className="block text-sm font-medium text-[#F5EFE6] opacity-90">
           {label}
         </label>
       )}
@@ -48,7 +48,7 @@ export const TouchTextarea = forwardRef(({
           ref={ref}
           className={`
             input touch-target w-full min-h-[120px] resize-y
-            ${error ? 'border-red-500 focus:border-red-500' : ''}
+            ${error ? 'border-[#6D94C5] focus:border-[#6D94C5]' : ''}
             ${className}
           `}
           onFocus={handleFocus}
@@ -59,7 +59,7 @@ export const TouchTextarea = forwardRef(({
         />
         
         {showCount && maxLength && (
-          <div className="absolute bottom-2 right-2 text-xs text-[#E43D12] opacity-60">
+          <div className="absolute bottom-2 right-2 text-xs text-[#F5EFE6] opacity-60">
             {charCount}/{maxLength}
           </div>
         )}
@@ -71,7 +71,7 @@ export const TouchTextarea = forwardRef(({
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="text-sm text-red-400"
+            className="text-sm text-[#F5EFE6]"
           >
             {error}
           </motion.p>

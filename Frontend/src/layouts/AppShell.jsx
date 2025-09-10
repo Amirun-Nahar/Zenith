@@ -7,14 +7,14 @@ export default function AppShell() {
     <div 
       className="min-h-screen relative overflow-hidden"
       style={{
-        background: '#EBE9E1',
+        background: '#19183B',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="relative grid grid-rows-[56px_1fr_auto] sm:grid-rows-[64px_1fr_auto] min-h-screen z-10" style={{ color: '#E43D12' }}>
-        <header className="sticky top-0 border-b backdrop-blur-md z-50" style={{ borderColor: '#EFB11D', backgroundColor: 'rgba(235, 233, 225, 0.2)' }}>
+      <div className="relative grid grid-rows-[56px_1fr_auto] sm:grid-rows-[64px_1fr_auto] min-h-screen z-10" style={{ color: '#F5EFE6' }}>
+        <header className="sticky top-0 border-b backdrop-blur-md z-50" style={{ borderColor: '#6D94C5', backgroundColor: 'rgba(25, 24, 59, 0.8)' }}>
           <Navbar />
         </header>
 

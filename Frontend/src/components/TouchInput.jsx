@@ -25,7 +25,7 @@ export const TouchInput = forwardRef(({
   return (
     <div className="space-y-1">
       {label && (
-        <label className="block text-sm font-medium text-[#E43D12] opacity-90">
+        <label className="block text-sm font-medium text-[#F5EFE6] opacity-90">
           {label}
         </label>
       )}
@@ -41,7 +41,7 @@ export const TouchInput = forwardRef(({
           type={type}
           className={`
             input touch-target w-full
-            ${error ? 'border-red-500 focus:border-red-500' : ''}
+            ${error ? 'border-[#6D94C5] focus:border-[#6D94C5]' : ''}
             ${className}
           `}
           onFocus={handleFocus}
@@ -54,7 +54,7 @@ export const TouchInput = forwardRef(({
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
-          className="text-sm text-red-400"
+          className="text-sm text-[#F5EFE6]"
         >
           {error}
         </motion.p>

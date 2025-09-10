@@ -6,14 +6,14 @@ export default function Home() {
     <div 
       className="min-h-screen relative overflow-hidden"
       style={{
-        background: '#EBE9E1',
+        background: '#19183B',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}
     >
-      <div className="relative flex flex-col min-h-screen z-10" style={{ color: '#E43D12' }}>
-        <header className="border-b backdrop-blur-md" style={{ borderColor: '#EFB11D', backgroundColor: 'rgba(235, 233, 225, 0.2)' }}>
+      <div className="relative flex flex-col min-h-screen z-10" style={{ color: '#F5EFE6' }}>
+        <header className="border-b backdrop-blur-md" style={{ borderColor: '#6D94C5', backgroundColor: 'rgba(25, 24, 59, 0.8)' }}>
           <Navbar />
         </header>
 
@@ -23,7 +23,7 @@ export default function Home() {
               <h1 className="mobile-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
                 Your Personal<br className="hidden sm:block" /> Academic Hub
               </h1>
-              <p className="mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 mobile-text" style={{ color: '#E43D12', opacity: 0.8 }}>
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 mobile-text" style={{ color: '#F5EFE6', opacity: 0.8 }}>
                 Focus smarter. Track classes, manage budgets, plan studies, and practice with AI-powered Q&A — all in one place.
               </p>
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
@@ -31,7 +31,7 @@ export default function Home() {
                 <Link to="/login" className="btn mobile-btn">Sign In</Link>
               </div>
             </div>
-            <div className="rounded-2xl border backdrop-blur-md p-4 sm:p-6 md:p-8 mt-8 lg:mt-0" style={{ borderColor: '#EFB11D', backgroundColor: '#EBE9E1' }}>
+            <div className="rounded-2xl border backdrop-blur-md p-4 sm:p-6 md:p-8 mt-8 lg:mt-0" style={{ borderColor: '#6D94C5', backgroundColor: '#19183B' }}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-sm">
                 {[
                   { title: 'Schedule Tracker', desc: 'Color-coded weekly view.' },

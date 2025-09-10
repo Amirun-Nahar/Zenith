@@ -410,7 +410,7 @@ export default function AutoMindMap({ onNodeClick }) {
       <div
         ref={containerRef}
         className="relative h-[600px] sm:h-[700px] md:h-[800px] lg:h-[900px] xl:h-[1000px] rounded-xl border overflow-hidden touch-none"
-        style={{ backgroundColor: '#EBE9E1', borderColor: '#EFB11D' }}
+        style={{ backgroundColor: '#19183B', borderColor: '#6D94C5' }}
       >
         {loading ? (
           <div className="absolute inset-0 flex items-center justify-center">

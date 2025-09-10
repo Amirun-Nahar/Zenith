@@ -1,16 +1,16 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Enhanced color palette with gradients
+// Project color palette
 const BRANCH_COLORS = [
-  { bg: '#E3F2FD', border: '#1976D2', text: '#0D47A1' }, // Blue
-  { bg: '#F3E5F5', border: '#7B1FA2', text: '#4A148C' }, // Purple
-  { bg: '#E8F5E8', border: '#388E3C', text: '#1B5E20' }, // Green
-  { bg: '#FFF3E0', border: '#F57C00', text: '#E65100' }, // Orange
-  { bg: '#FCE4EC', border: '#C2185B', text: '#880E4F' }, // Pink
-  { bg: '#F1F8E9', border: '#689F38', text: '#33691E' }, // Lime
-  { bg: '#E0F2F1', border: '#00796B', text: '#004D40' }, // Teal
-  { bg: '#FFF8E1', border: '#F9A825', text: '#F57F17' }, // Yellow
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
+  { bg: '#19183B', border: '#6D94C5', text: '#F5EFE6' }, // Primary
 ];
 
 const AdvancedMindMap = ({ data, onNodeClick, onNodeEdit, onNodeAdd, onNodeDelete }) => {

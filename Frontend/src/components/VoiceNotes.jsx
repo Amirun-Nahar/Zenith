@@ -72,19 +72,19 @@ export default function VoiceNotes() {
   return (
     <div className="space-y-4 sm:space-y-6 p-4 sm:p-6">
       <div className="text-center">
-        <h2 className="text-xl sm:text-2xl font-bold mb-2" style={{ color: '#E43D12' }}>🎤 Voice Study Notes</h2>
-        <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Speak your thoughts and capture them instantly</p>
+        <h2 className="text-xl sm:text-2xl font-bold mb-2" style={{ color: '#E7F2EF' }}>🎤 Voice Study Notes</h2>
+        <p className="text-sm sm:text-base" style={{ color: '#E7F2EF', opacity: 0.8 }}>Speak your thoughts and capture them instantly</p>
       </div>
 
       {/* Recording Controls */}
-      <div className="card p-4 sm:p-6 border border-green-500/30">
+      <div className="card p-4 sm:p-6 border border-[#708993]/30">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-4 sm:mb-6">
           <button
             onClick={isRecording ? stopRecording : startRecording}
             className={`w-full sm:w-auto px-4 sm:px-6 py-3 rounded-full font-medium transition-all ${
               isRecording
-                ? 'bg-red-600 hover:bg-red-700 text-white animate-pulse'
-                : 'bg-green-600 hover:bg-green-700 text-white'
+                ? 'bg-[#708993] hover:bg-[#708993] text-white animate-pulse'
+                : 'bg-[#708993] hover:bg-[#708993] text-white'
             }`}
           >
             {isRecording ? '🛑 Stop Recording' : '🎤 Start Recording'}
@@ -99,15 +99,15 @@ export default function VoiceNotes() {
             onChange={(e) => setCurrentNote(e.target.value)}
             placeholder="Subject/Topic (optional)"
             className="input w-full text-sm sm:text-base"
-            style={{ color: '#E43D12' }}
+            style={{ color: '#E7F2EF' }}
           />
         </div>
 
         {/* Live Transcript */}
         {isRecording && (
           <div className="mb-4 p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10">
-            <p className="text-xs sm:text-sm mb-2" style={{ color: '#E43D12', opacity: 0.7 }}>Live transcript:</p>
-            <p className="text-sm sm:text-base" style={{ color: '#E43D12' }}>{transcript || 'Listening...'}</p>
+            <p className="text-xs sm:text-sm mb-2" style={{ color: '#E7F2EF', opacity: 0.7 }}>Live transcript:</p>
+            <p className="text-sm sm:text-base" style={{ color: '#E7F2EF' }}>{transcript || 'Listening...'}</p>
           </div>
         )}
 
@@ -125,11 +125,11 @@ export default function VoiceNotes() {
       </div>
 
       {/* Saved Notes */}
-      <div className="card p-4 sm:p-6 border border-purple-500/30">
-        <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>📝 Saved Notes</h3>
+      <div className="card p-4 sm:p-6 border border-[#708993]/30">
+        <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: '#E7F2EF' }}>📝 Saved Notes</h3>
         
         {notes.length === 0 ? (
-          <p className="text-center py-6 sm:py-8 text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.7 }}>
+          <p className="text-center py-6 sm:py-8 text-sm sm:text-base" style={{ color: '#E7F2EF', opacity: 0.7 }}>
             No notes yet. Start recording to capture your thoughts!
           </p>
         ) : (
@@ -140,19 +140,19 @@ export default function VoiceNotes() {
                 className="p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10"
               >
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 sm:gap-0 mb-2">
-                  <span className="text-xs text-blue-600 bg-blue-400/10 px-2 py-1 rounded inline-block">
+                  <span className="text-xs text-[#E7F2EF] bg-[#708993]/10 px-2 py-1 rounded inline-block">
                     {note.subject}
                   </span>
                   <button
                     onClick={() => deleteNote(note.id)}
-                    className="text-sm px-2 py-1 rounded border transition-all duration-200 hover:bg-red-500/20 sm:ml-2"
-                    style={{ color: '#dc2626', borderColor: 'rgba(220, 38, 38, 0.3)' }}
+                    className="text-sm px-2 py-1 rounded border transition-all duration-200 hover:bg-[#708993]/20 sm:ml-2"
+                    style={{ color: '#E7F2EF', borderColor: 'rgba(112, 137, 147, 0.3)' }}
                   >
                     🗑️ Delete
                   </button>
                 </div>
-                <p className="mb-2 text-sm sm:text-base" style={{ color: '#E43D12' }}>{note.text}</p>
-                <p className="text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>{note.timestamp}</p>
+                <p className="mb-2 text-sm sm:text-base" style={{ color: '#E7F2EF' }}>{note.text}</p>
+                <p className="text-xs" style={{ color: '#E7F2EF', opacity: 0.7 }}>{note.timestamp}</p>
               </div>
             ))}
           </div>

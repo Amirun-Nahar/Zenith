@@ -14,7 +14,7 @@ function TouchButtonBase({
   const baseClasses = 'btn touch-target transition-all duration-200';
   const variantClasses = {
     primary: 'btn-primary',
-    secondary: 'bg-white/10 text-[#E43D12]',
+    secondary: 'bg-white/10 text-[#F5EFE6]',
     danger: 'btn-danger',
     success: 'btn-success',
   };

@@ -75,7 +75,7 @@ export default function QA() {
   return (
     <div className="space-y-5 sm:space-y-6">
       <div className="card p-4 sm:p-6">
-        <h1 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4" style={{ color: '#E43D12' }}>AI Study Assistant</h1>
+        <h1 className="text-xl sm:text-2xl font-semibold mb-3 sm:mb-4" style={{ color: '#F5EFE6' }}>AI Study Assistant</h1>
         
         {/* Mode Selector */}
         <div className="flex space-x-1 bg-white/10 rounded-lg p-1 mb-4 sm:mb-6">
@@ -83,8 +83,8 @@ export default function QA() {
             onClick={() => setMode('flashcards')}
             className={`flex-1 py-2 px-3 sm:px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
               mode === 'flashcards'
-                ? 'bg-[#EFB11D] text-[#EBE9E1] shadow-lg'
-                : 'bg-transparent text-[#E43D12] hover:bg-[#EFB11D]/20'
+                ? 'bg-[#6D94C5] text-[#F5EFE6] shadow-lg'
+                : 'bg-transparent text-[#F5EFE6] hover:bg-[#6D94C5]/20'
             }`}
           >
             📚 Flashcards
@@ -93,8 +93,8 @@ export default function QA() {
             onClick={() => setMode('quiz')}
             className={`flex-1 py-2 px-3 sm:px-4 rounded-lg text-sm font-medium transition-all duration-200 ${
               mode === 'quiz'
-                ? 'bg-[#EFB11D] text-[#EBE9E1] shadow-lg'
-                : 'bg-transparent text-[#E43D12] hover:bg-[#EFB11D]/20'
+                ? 'bg-[#6D94C5] text-[#F5EFE6] shadow-lg'
+                : 'bg-transparent text-[#F5EFE6] hover:bg-[#6D94C5]/20'
             }`}
           >
             🧠 Quiz
@@ -117,7 +117,7 @@ export default function QA() {
             />
             <div className="grid grid-cols-3 gap-2 sm:gap-3">
               <div>
-                <label className="text-sm block mb-1" style={{ color: '#E43D12', opacity: 0.7 }}>Count</label>
+                <label className="text-sm block mb-1" style={{ color: '#F5EFE6', opacity: 0.7 }}>Count</label>
                 <input 
                   className="input text-base sm:text-sm py-2.5 sm:py-2" 
                   type="number" 
@@ -128,7 +128,7 @@ export default function QA() {
                 />
               </div>
               <div className="col-span-2">
-                <label className="text-sm block mb-1" style={{ color: '#E43D12', opacity: 0.7 }}>Difficulty</label>
+                <label className="text-sm block mb-1" style={{ color: '#F5EFE6', opacity: 0.7 }}>Difficulty</label>
                 <select 
                   className="input text-base sm:text-sm py-2.5 sm:py-2" 
                   value={difficulty} 
@@ -147,7 +147,7 @@ export default function QA() {
             >
               {loading ? (
                 <div className="flex items-center justify-center">
-                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-[#E43D12] border-t-transparent mr-2"></div>
+                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-[#F5EFE6] border-t-transparent mr-2"></div>
                   <span>Thinking...</span>
                 </div>
               ) : mode === 'flashcards' ? 'Generate Flashcards' : 'Generate Quiz'}
@@ -159,16 +159,16 @@ export default function QA() {
               <div className="card p-6 sm:p-8 text-center">
                 <div className="flex flex-col items-center space-y-4">
                   <div className="relative">
-                    <div className="animate-spin rounded-full h-10 sm:h-12 w-10 sm:w-12 border-4 border-[#EFB11D] border-t-transparent"></div>
+                    <div className="animate-spin rounded-full h-10 sm:h-12 w-10 sm:w-12 border-4 border-[#6D94C5] border-t-transparent"></div>
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-xl sm:text-2xl">🧠</div>
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#E43D12' }}>
+                    <h3 className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#F5EFE6' }}>
                       AI is thinking...
                     </h3>
-                    <p className="text-sm" style={{ color: '#E43D12', opacity: 0.7 }}>
+                    <p className="text-sm" style={{ color: '#F5EFE6', opacity: 0.7 }}>
                       {mode === 'flashcards' 
                         ? 'Generating personalized flashcards for your topic' 
                         : 'Creating an interactive quiz to test your knowledge'
@@ -176,7 +176,7 @@ export default function QA() {
                     </p>
                   </div>
                   <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-[#EFB11D] rounded-full animate-bounce"></div>
+                    <div className="w-2 h-2 bg-[#6D94C5] rounded-full animate-bounce"></div>
                     <div className="w-2 h-2 bg-[#EFB11D] rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
                     <div className="w-2 h-2 bg-[#EFB11D] rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
                   </div>
@@ -184,35 +184,35 @@ export default function QA() {
               </div>
             ) : mode === 'flashcards' ? (
               cards.length === 0 ? (
-                <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Generated flashcards will appear here.</p>
+                <p className="text-sm sm:text-base" style={{ color: '#F5EFE6', opacity: 0.8 }}>Generated flashcards will appear here.</p>
               ) : (
                 <div className="grid grid-cols-1 gap-2 sm:gap-3">
                   {cards.map((c, i) => (
-                    <div key={i} className="rounded-xl border p-3 sm:p-4" style={{ borderColor: '#EFB11D', backgroundColor: '#EBE9E1' }}>
-                      <div className="font-medium text-base sm:text-base" style={{ color: '#E43D12' }}>Q{i+1}. {c.question}</div>
-                      <div className="text-sm mt-1.5" style={{ color: '#E43D12', opacity: 0.8 }}>{c.answer}</div>
+                    <div key={i} className="rounded-xl border p-3 sm:p-4" style={{ borderColor: '#6D94C5', backgroundColor: '#19183B' }}>
+                      <div className="font-medium text-base sm:text-base" style={{ color: '#F5EFE6' }}>Q{i+1}. {c.question}</div>
+                      <div className="text-sm mt-1.5" style={{ color: '#F5EFE6', opacity: 0.8 }}>{c.answer}</div>
                     </div>
                   ))}
                 </div>
               )
             ) : (
               quiz.length === 0 ? (
-                <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Generated quiz will appear here.</p>
+                <p className="text-sm sm:text-base" style={{ color: '#F5EFE6', opacity: 0.8 }}>Generated quiz will appear here.</p>
               ) : (
                 <div className="space-y-3 sm:space-y-4">
                   {/* Quiz Progress */}
                   <div className="flex justify-between items-center">
-                    <span className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
+                    <span className="text-sm" style={{ color: '#F5EFE6', opacity: 0.8 }}>
                       Question {currentQuestion + 1} of {quiz.length}
                     </span>
-                    <span className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
+                    <span className="text-sm" style={{ color: '#F5EFE6', opacity: 0.8 }}>
                       Score: {score}/{currentQuestion + (showResult ? 1 : 0)}
                     </span>
                   </div>
 
                   {/* Current Question */}
                   <div className="card p-3 sm:p-4">
-                    <h3 className="font-semibold mb-3 sm:mb-4 text-base sm:text-base" style={{ color: '#E43D12' }}>
+                    <h3 className="font-semibold mb-3 sm:mb-4 text-base sm:text-base" style={{ color: '#F5EFE6' }}>
                       {quiz[currentQuestion]?.question}
                     </h3>
                     
@@ -229,7 +229,7 @@ export default function QA() {
                                 : selectedAnswer === option
                                 ? 'border-red-500 bg-red-500/20 text-red-300'
                                 : 'border-gray-500 bg-gray-500/10 text-gray-400'
-                              : 'border-gray-400 bg-gray-500/10 text-[#E43D12] hover:bg-gray-500/20 hover:border-gray-300'
+                              : 'border-gray-400 bg-gray-500/10 text-[#F5EFE6] hover:bg-gray-500/20 hover:border-gray-300'
                           }`}
                         >
                           {option}
@@ -238,8 +238,8 @@ export default function QA() {
                     </div>
 
                     {showResult && (
-                      <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 rounded-lg" style={{ backgroundColor: '#EBE9E1' }}>
-                        <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
+                      <div className="mt-3 sm:mt-4 p-2.5 sm:p-3 rounded-lg" style={{ backgroundColor: '#19183B' }}>
+                        <p className="text-sm" style={{ color: '#F5EFE6', opacity: 0.8 }}>
                           {selectedAnswer === quiz[currentQuestion].correctAnswer ? '✅ Correct!' : '❌ Incorrect. The correct answer is: ' + quiz[currentQuestion].correctAnswer}
                         </p>
                       </div>
@@ -263,7 +263,7 @@ export default function QA() {
                         </button>
                       ) : showResult ? (
                         <div className="text-center w-full sm:w-auto">
-                          <p className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#E43D12' }}>
+                          <p className="text-base sm:text-lg font-semibold mb-2" style={{ color: '#F5EFE6' }}>
                             Quiz Complete! Final Score: {score}/{quiz.length}
                           </p>
                           <button

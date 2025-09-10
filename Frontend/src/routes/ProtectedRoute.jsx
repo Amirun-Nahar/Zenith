@@ -46,7 +46,7 @@ export default function ProtectedRoute({ children }) {
       <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#EBE9E1' }}>
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-          <p style={{ color: '#E43D12', opacity: 0.8 }}>Loading...</p>
+          <p style={{ color: '#E85A4F', opacity: 0.8 }}>Loading...</p>
         </div>
       </div>
     )

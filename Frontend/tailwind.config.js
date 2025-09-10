@@ -7,16 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          background: '#EBE9E1',
-          font: '#E43D12',
-          accent: '#EFB11D',
-        },
-        background: '#EBE9E1',
-        foreground: '#E43D12',
-        accent: '#EFB11D',
-        surface: '#EBE9E1',
-        border: '#EFB11D',
+        // Strict three-color palette
+        background: '#19183B', // Dark blue background
+        text: '#F5EFE6',      // Light cream text/font color
+        button: '#E7F2EF',    // Button color
+        accent: '#6D94C5',    // Accent/borders color
+        // Aliases for consistency
+        foreground: '#F5EFE6',
+        primary: '#E7F2EF',
+        border: '#6D94C5',
+        surface: '#19183B',
       },
       fontFamily: {
         sans: ['Merriweather', 'system-ui', 'sans-serif'],
