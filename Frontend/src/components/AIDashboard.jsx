@@ -45,8 +45,8 @@ export default function AIDashboard() {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h1 className="text-3xl font-bold mb-2" style={{ color: '#f8f7e5' }}>AI-Powered Insights</h1>
-        <p style={{ color: '#f8f7e5', opacity: 0.8 }}>Your personal AI assistant for academic success</p>
+        <h1 className="text-3xl font-bold mb-2" style={{ color: '#E43D12' }}>AI-Powered Insights</h1>
+        <p style={{ color: '#E43D12', opacity: 0.8 }}>Your personal AI assistant for academic success</p>
       </div>
 
       {/* Tab Navigation */}
@@ -59,8 +59,8 @@ export default function AIDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-shrink-0 py-2 px-3 rounded-lg text-sm font-medium transition-all duration-200 border-2 ${
                 activeTab === tab.id
-                  ? 'bg-[#63786b] text-[#f8f7e5] border-[#63786b] shadow-lg'
-                  : 'bg-transparent text-[#f8f7e5] border-transparent hover:bg-[#63786b]/20 hover:border-[#63786b]/30 hover:shadow-md'
+                  ? 'bg-[#EFB11D] text-[#EBE9E1] border-[#EFB11D] shadow-lg'
+                  : 'bg-transparent text-[#E43D12] border-transparent hover:bg-[#EFB11D]/20 hover:border-[#EFB11D]/30 hover:shadow-md'
               }`}
             >
               <span className="mr-1">{tab.icon}</span>
@@ -77,8 +77,8 @@ export default function AIDashboard() {
               onClick={() => setActiveTab(tab.id)}
               className={`flex-1 py-3 px-4 rounded-lg text-sm font-medium transition-all duration-200 border-2 ${
                 activeTab === tab.id
-                  ? 'bg-[#63786b] text-[#f8f7e5] border-[#63786b] shadow-lg'
-                  : 'bg-transparent text-[#f8f7e5] border-transparent hover:bg-[#63786b]/20 hover:border-[#63786b]/30 hover:shadow-md'
+                  ? 'bg-[#EFB11D] text-[#EBE9E1] border-[#EFB11D] shadow-lg'
+                  : 'bg-transparent text-[#E43D12] border-transparent hover:bg-[#EFB11D]/20 hover:border-[#EFB11D]/30 hover:shadow-md'
               }`}
             >
               <span className="mr-2">{tab.icon}</span>
@@ -114,7 +114,7 @@ function StudyInsights({ insights }) {
   return (
     <div className="space-y-4">
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#f8f7e5' }}>📊 Study Performance Analysis</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>📊 Study Performance Analysis</h3>
         {insights.length > 0 ? (
           <div className="space-y-3">
             {insights.map((insight, index) => (
@@ -125,15 +125,15 @@ function StudyInsights({ insights }) {
                   insight.priority === 'medium' ? 'border-yellow-400' :
                   'border-emerald-400'
                 }`}
-                style={{ backgroundColor: 'rgba(248, 247, 229, 0.1)' }}
+                style={{ backgroundColor: '#EBE9E1' }}
               >
-                <p className="mb-2" style={{ color: '#f8f7e5' }}>{insight.message}</p>
-                <p className="text-sm" style={{ color: '#f8f7e5', opacity: 0.8 }}>{insight.action}</p>
+                <p className="mb-2" style={{ color: '#E43D12' }}>{insight.message}</p>
+                <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>{insight.action}</p>
               </div>
             ))}
           </div>
         ) : (
-          <p style={{ color: '#f8f7e5', opacity: 0.8 }}>Complete some tasks to get personalized study insights!</p>
+          <p style={{ color: '#E43D12', opacity: 0.8 }}>Complete some tasks to get personalized study insights!</p>
         )}
       </div>
     </div>
@@ -347,7 +347,7 @@ function BudgetInsights() {
       <div className="space-y-4">
         <div className="card p-6 border border-red-500/30">
           <h3 className="text-xl font-semibold text-red-600 mb-4">❌ Error Loading Budget Data</h3>
-                            <p className="mb-4" style={{ color: '#f8f7e5', opacity: 0.8 }}>{error}</p>
+                            <p className="mb-4" style={{ color: '#E43D12', opacity: 0.8 }}>{error}</p>
           <button 
             onClick={fetchBudgetData}
             className="btn btn-primary"
@@ -366,38 +366,38 @@ function BudgetInsights() {
               <div
                 className="card p-3 md:p-4 text-center"
               >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#f8f7e5' }}>${summary.totalIncome}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>Income</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>${summary.totalIncome}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Income</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#f8f7e5' }}>${summary.totalExpense}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>Expenses</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>${summary.totalExpense}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Expenses</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#f8f7e5' }}>{summary.savingsRate}%</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>Savings</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>{summary.savingsRate}%</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Savings</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#f8f7e5' }}>{summary.transactionCount}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>Transactions</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>{summary.transactionCount}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Transactions</p>
           </div>
           <div
             className="card p-3 md:p-4 text-center sm:col-span-1"
           >
-            <p className="text-lg md:text-2xl font-bold" style={{ color: '#f8f7e5' }}>{summary.categoryCount}</p>
-            <p className="text-[10px] md:text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>Categories</p>
+            <p className="text-lg md:text-2xl font-bold" style={{ color: '#E43D12' }}>{summary.categoryCount}</p>
+            <p className="text-[10px] md:text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>Categories</p>
           </div>
         </div>
       )}
       
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#f8f7e5' }}>💡 AI Budget Recommendations</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>💡 AI Budget Recommendations</h3>
         {insights.length > 0 ? (
           <div className="space-y-3">
             {insights.map((insight, index) => (
@@ -414,7 +414,7 @@ function BudgetInsights() {
                   insight.type === 'goal' ? 'border-emerald-400' :
                   'border-gray-300'
                 }`}
-                style={{ backgroundColor: 'rgba(248, 247, 229, 0.1)' }}
+                style={{ backgroundColor: '#EBE9E1' }}
               >
                 <div className="flex items-start gap-3">
                   <span className={`text-lg ${
@@ -439,15 +439,15 @@ function BudgetInsights() {
                      '💡'}
                   </span>
                   <div className="flex-1">
-                    <p className="mb-2" style={{ color: '#f8f7e5' }}>{insight.message}</p>
-                    <p className="text-sm" style={{ color: '#f8f7e5', opacity: 0.8 }}>{insight.recommendation}</p>
+                    <p className="mb-2" style={{ color: '#E43D12' }}>{insight.message}</p>
+                    <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>{insight.recommendation}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p style={{ color: '#f8f7e5', opacity: 0.8 }}>Add some transactions to get AI budget insights!</p>
+          <p style={{ color: '#E43D12', opacity: 0.8 }}>Add some transactions to get AI budget insights!</p>
         )}
       </div>
     </div>
@@ -497,7 +497,7 @@ function SmartSchedule() {
   return (
     <div className="space-y-4">
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#f8f7e5' }}>⏰ AI Planner Optimization</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>⏰ AI Planner Optimization</h3>
         
         <div className="mb-4 space-y-2">
           <button
@@ -508,7 +508,7 @@ function SmartSchedule() {
             {loading ? 'Optimizing...' : 'Optimize My Planner'}
           </button>
           
-          <div className="text-sm" style={{ color: '#f8f7e5', opacity: 0.8 }}>
+          <div className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
             <p>📋 Found {tasks.length} incomplete tasks</p>
             <p>🔄 {loading ? 'Processing...' : 'Ready to optimize'}</p>
           </div>
@@ -517,7 +517,7 @@ function SmartSchedule() {
         {tasks.length === 0 && (
           <div className="card p-4 border border-yellow-500/30">
             <p className="text-yellow-600 text-sm font-medium">⚠️ No tasks found</p>
-            <p className="text-xs mt-1" style={{ color: '#f8f7e5', opacity: 0.7 }}>
+            <p className="text-xs mt-1" style={{ color: '#E43D12', opacity: 0.7 }}>
               Go to the Planner page and create some tasks first, then come back to optimize your schedule!
             </p>
           </div>
@@ -527,7 +527,7 @@ function SmartSchedule() {
           <div className="space-y-4">
             <div className="card p-4 border border-green-500/30">
               <p className="text-green-700 text-sm font-medium">✨ AI has optimized your schedule!</p>
-                          <p className="text-xs mt-1" style={{ color: '#f8f7e5', opacity: 0.7 }}>
+                          <p className="text-xs mt-1" style={{ color: '#E43D12', opacity: 0.7 }}>
               {availableSlots} available time slots • {optimizedSchedule.length} tasks scheduled
             </p>
             </div>
@@ -541,21 +541,21 @@ function SmartSchedule() {
                   item.priority === 'medium' ? 'border-yellow-500' :
                   'border-green-500'
                 }`}
-                style={{ backgroundColor: 'rgba(248, 247, 229, 0.1)' }}
+                style={{ backgroundColor: '#EBE9E1' }}
               >
                   <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-semibold" style={{ color: '#f8f7e5' }}>{item.task}</h4>
+                    <h4 className="font-semibold" style={{ color: '#E43D12' }}>{item.task}</h4>
                     <span className={`text-xs px-2 py-1 rounded ${
                       item.priority === 'high' ? 'text-red-800' :
                       item.priority === 'medium' ? 'text-orange-700' :
                       'text-emerald-700'
                     }`}
-                    style={{ backgroundColor: 'rgba(248, 247, 229, 0.1)' }}>
+                    style={{ backgroundColor: '#EBE9E1' }}>
                       {item.priority}
                     </span>
                   </div>
-                  <p className="text-sm mb-2" style={{ color: '#f8f7e5', opacity: 0.8 }}>{item.subject}</p>
-                  <div className="space-y-1 text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>
+                  <p className="text-sm mb-2" style={{ color: '#E43D12', opacity: 0.8 }}>{item.subject}</p>
+                  <div className="space-y-1 text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>
                     <p>📅 {item.dayName} at {item.hour}:00</p>
                     <p>⏱️ {item.estimatedDuration}</p>
                     <p>⏰ Due: {new Date(item.deadline).toLocaleDateString()}</p>
@@ -569,7 +569,7 @@ function SmartSchedule() {
                 <h4 className="text-blue-700 text-sm font-medium mb-2">💡 AI Recommendations</h4>
                 <ul className="space-y-1">
                   {recommendations.map((rec, index) => (
-                    <li key={index} className="text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>• {rec}</li>
+                    <li key={index} className="text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>• {rec}</li>
                   ))}
                 </ul>
               </div>
@@ -613,14 +613,14 @@ function AIStudyBuddy() {
   return (
     <div className="space-y-4">
       <div className="card p-6">
-        <h3 className="text-xl font-semibold mb-4" style={{ color: '#f8f7e5' }}>🤖 AI Study Buddy</h3>
+        <h3 className="text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>🤖 AI Study Buddy</h3>
         
         {/* Chat History */}
         <div className="h-[50vh] md:h-64 overflow-y-auto mb-4 space-y-3 px-2">
           {chatHistory.length === 0 ? (
             <div className="text-center py-8">
-              <p className="mb-2 text-sm md:text-base" style={{ color: '#f8f7e5', opacity: 0.8 }}>Ask me anything about studying, scheduling, or budgeting!</p>
-              <p className="text-[10px] md:text-xs" style={{ color: '#f8f7e5' }}>🤖 Powered by Gemini AI</p>
+              <p className="mb-2 text-sm md:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Ask me anything about studying, scheduling, or budgeting!</p>
+              <p className="text-[10px] md:text-xs" style={{ color: '#E43D12' }}>🤖 Powered by Gemini AI</p>
             </div>
           ) : (
             chatHistory.map((msg, index) => (
@@ -636,7 +636,7 @@ function AIStudyBuddy() {
                   }`}
                 >
                   <div className="flex items-start justify-between gap-2">
-                    <p className="text-sm break-words" style={{ color: '#f8f7e5' }}>{msg.text}</p>
+                    <p className="text-sm break-words" style={{ color: '#E43D12' }}>{msg.text}</p>
                     {msg.isAI && (
                       <span className="text-[10px] md:text-xs text-green-600 flex-shrink-0">🤖 AI</span>
                     )}
@@ -660,7 +660,7 @@ function AIStudyBuddy() {
           )}
           {loading && (
             <div className="flex justify-start">
-              <div className="card p-3" style={{ color: '#f8f7e5' }}>
+              <div className="card p-3" style={{ color: '#E43D12' }}>
                 <p className="text-sm">🤔 Thinking...</p>
               </div>
             </div>
@@ -675,7 +675,7 @@ function AIStudyBuddy() {
             onChange={(e) => setMessage(e.target.value)}
             onKeyPress={(e) => e.key === 'Enter' && sendMessage()}
             className="flex-1 input"
-            style={{ color: '#f8f7e5' }}
+            style={{ color: '#E43D12' }}
             placeholder="Ask your AI study buddy..."
           />
           <button

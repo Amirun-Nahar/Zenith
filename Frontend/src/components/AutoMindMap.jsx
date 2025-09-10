@@ -410,7 +410,7 @@ export default function AutoMindMap({ onNodeClick }) {
       <div
         ref={containerRef}
         className="relative h-[600px] sm:h-[700px] md:h-[800px] lg:h-[900px] xl:h-[1000px] rounded-xl border overflow-hidden touch-none"
-        style={{ backgroundColor: '#374151', borderColor: 'rgba(248, 247, 229, 0.2)' }}
+        style={{ backgroundColor: '#EBE9E1', borderColor: '#EFB11D' }}
       >
         {loading ? (
           <div className="absolute inset-0 flex items-center justify-center">
@@ -421,7 +421,7 @@ export default function AutoMindMap({ onNodeClick }) {
                   <div className="text-2xl">🧠</div>
                 </div>
               </div>
-              <p className="text-sm" style={{ color: '#f8f7e5', opacity: 0.8 }}>
+              <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
                 Generating mindmap...
               </p>
             </div>

@@ -28,7 +28,7 @@ export const TouchSelect = forwardRef(({
   return (
     <div className="space-y-1 relative">
       {label && (
-        <label className="block text-sm font-medium text-[#f8f7e5] opacity-90">
+        <label className="block text-sm font-medium text-[#E43D12] opacity-90">
           {label}
         </label>
       )}

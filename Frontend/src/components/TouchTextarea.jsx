@@ -32,7 +32,7 @@ export const TouchTextarea = forwardRef(({
   return (
     <div className="space-y-1">
       {label && (
-        <label className="block text-sm font-medium text-[#f8f7e5] opacity-90">
+        <label className="block text-sm font-medium text-[#E43D12] opacity-90">
           {label}
         </label>
       )}
@@ -59,7 +59,7 @@ export const TouchTextarea = forwardRef(({
         />
         
         {showCount && maxLength && (
-          <div className="absolute bottom-2 right-2 text-xs text-[#f8f7e5] opacity-60">
+          <div className="absolute bottom-2 right-2 text-xs text-[#E43D12] opacity-60">
             {charCount}/{maxLength}
           </div>
         )}

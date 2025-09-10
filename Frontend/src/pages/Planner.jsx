@@ -47,13 +47,13 @@ export default function Planner() {
 
   return (
     <div className="space-y-5 sm:space-y-6">
-      <h1 className="text-xl sm:text-2xl font-semibold" style={{ color: '#f8f7e5' }}>Study Planner</h1>
+      <h1 className="text-xl sm:text-2xl font-semibold" style={{ color: '#E43D12' }}>Study Planner</h1>
 
       <div className="card p-4 sm:p-6">
-        <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#f8f7e5' }}>Add Task</h2>
+        <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#E43D12' }}>Add Task</h2>
         <form onSubmit={submit} className="grid md:grid-cols-2 gap-3 sm:gap-4">
           <div className="space-y-1 sm:space-y-2">
-            <label className="text-sm block" style={{ color: '#f8f7e5' }}>Subject</label>
+            <label className="text-sm block" style={{ color: '#E43D12' }}>Subject</label>
             <input 
               className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
               name="subject" 
@@ -62,7 +62,7 @@ export default function Planner() {
             />
           </div>
           <div className="space-y-1 sm:space-y-2">
-            <label className="text-sm block" style={{ color: '#f8f7e5' }}>Topic</label>
+            <label className="text-sm block" style={{ color: '#E43D12' }}>Topic</label>
             <input 
               className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
               name="topic" 
@@ -71,7 +71,7 @@ export default function Planner() {
             />
           </div>
           <div className="space-y-1 sm:space-y-2">
-            <label className="text-sm block" style={{ color: '#f8f7e5' }}>Priority</label>
+            <label className="text-sm block" style={{ color: '#E43D12' }}>Priority</label>
             <select 
               className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
               name="priority" 
@@ -84,7 +84,7 @@ export default function Planner() {
             </select>
           </div>
           <div className="space-y-1 sm:space-y-2">
-            <label className="text-sm block" style={{ color: '#f8f7e5' }}>Deadline</label>
+            <label className="text-sm block" style={{ color: '#E43D12' }}>Deadline</label>
             <input 
               className="input w-full text-base sm:text-sm py-2.5 sm:py-2" 
               type="date" 
@@ -101,11 +101,11 @@ export default function Planner() {
       </div>
 
       <div className="card p-4 sm:p-6">
-        <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#f8f7e5' }}>Tasks</h2>
+        <h2 className="text-lg font-medium mb-3 sm:mb-4" style={{ color: '#E43D12' }}>Tasks</h2>
         {loading ? (
-          <p className="text-sm sm:text-base" style={{ color: '#f8f7e5', opacity: 0.8 }}>Loading…</p>
+          <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Loading…</p>
         ) : items.length === 0 ? (
-          <p className="text-sm sm:text-base" style={{ color: '#f8f7e5', opacity: 0.8 }}>No tasks yet.</p>
+          <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>No tasks yet.</p>
         ) : (
           <div className="space-y-2 sm:space-y-3">
             {items.map((t) => (
@@ -123,7 +123,7 @@ export default function Planner() {
                   />
                   <div className="min-w-0 flex-1">
                     <div className="font-medium text-base sm:text-base truncate">{t.subject} — {t.topic}</div>
-                    <div className="text-xs flex flex-wrap gap-x-2 gap-y-1 mt-1" style={{ color: '#f8f7e5', opacity: 0.7 }}>
+                    <div className="text-xs flex flex-wrap gap-x-2 gap-y-1 mt-1" style={{ color: '#E43D12', opacity: 0.7 }}>
                       <span>Priority: {t.priority}</span>
                       {t.deadline && (
                         <>

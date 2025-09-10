@@ -122,22 +122,22 @@ export default function Register() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        backgroundColor: '#63786b',
+        background: '#EBE9E1',
         backgroundBlendMode: 'soft-light'
       }}
     >
-      <div className="relative flex flex-col min-h-screen z-10" style={{ color: '#f8f7e5' }}>
-        <header className="border-b backdrop-blur-md" style={{ borderColor: 'rgba(248, 247, 229, 0.2)', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+      <div className="relative flex flex-col min-h-screen z-10" style={{ color: '#E43D12' }}>
+        <header className="border-b backdrop-blur-md" style={{ borderColor: '#EFB11D', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
           <Navbar />
         </header>
 
         <main className="flex-1 flex items-center justify-center p-3 sm:p-4 md:px-6 lg:px-8 py-6 sm:py-8 md:py-12">
-          <div className="w-full max-w-md backdrop-blur-md border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl" style={{ backgroundColor: 'rgba(248, 247, 229, 0.1)', borderColor: 'rgba(248, 247, 229, 0.2)' }}>
+          <div className="w-full max-w-md backdrop-blur-md border rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 shadow-2xl" style={{ backgroundColor: '#EBE9E1', borderColor: '#EFB11D' }}>
             <div className="text-center mb-5 sm:mb-6 md:mb-8">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-2" style={{ color: '#f8f7e5' }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-2" style={{ color: '#E43D12' }}>
                 Create Account
               </h1>
-              <p className="text-sm sm:text-base" style={{ color: '#f8f7e5', opacity: 0.8 }}>
+              <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>
                 Start your journey with Zenith
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function Register() {
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               {/* Name Field */}
               <div className="space-y-1.5 sm:space-y-2">
-                <label htmlFor="name" className="text-sm font-medium block" style={{ color: '#f8f7e5' }}>
+                <label htmlFor="name" className="text-sm font-medium block" style={{ color: '#E43D12' }}>
                   Full Name
                 </label>
                 <input 
@@ -158,9 +158,9 @@ export default function Register() {
                     errors.name ? 'border-red-500' : 'border-opacity-30'
                   }`}
                   style={{ 
-                    backgroundColor: 'rgba(248, 247, 229, 0.15)', 
-                    borderColor: errors.name ? '#ef4444' : 'rgba(248, 247, 229, 0.4)', 
-                    color: '#f8f7e5',
+                    backgroundColor: '#EBE9E1', 
+                    borderColor: errors.name ? '#ef4444' : '#EFB11D', 
+                    color: '#E43D12',
                     '--tw-placeholder-opacity': '0.7'
                   }}
                   placeholder="Enter your full name"
@@ -173,7 +173,7 @@ export default function Register() {
 
               {/* Email Field */}
               <div className="space-y-1.5 sm:space-y-2">
-                <label htmlFor="email" className="text-sm font-medium block" style={{ color: '#f8f7e5' }}>
+                <label htmlFor="email" className="text-sm font-medium block" style={{ color: '#E43D12' }}>
                   Email Address
                 </label>
                 <input 
@@ -186,9 +186,9 @@ export default function Register() {
                     errors.email ? 'border-red-500' : 'border-opacity-30'
                   }`}
                   style={{ 
-                    backgroundColor: 'rgba(248, 247, 229, 0.15)', 
-                    borderColor: errors.email ? '#ef4444' : 'rgba(248, 247, 229, 0.4)', 
-                    color: '#f8f7e5',
+                    backgroundColor: '#EBE9E1', 
+                    borderColor: errors.email ? '#ef4444' : '#EFB11D', 
+                    color: '#E43D12',
                     '--tw-placeholder-opacity': '0.7'
                   }}
                   placeholder="Enter your email"
@@ -201,7 +201,7 @@ export default function Register() {
 
               {/* Password Field */}
               <div className="space-y-1.5 sm:space-y-2">
-                <label htmlFor="password" className="text-sm font-medium block" style={{ color: '#f8f7e5' }}>
+                <label htmlFor="password" className="text-sm font-medium block" style={{ color: '#E43D12' }}>
                   Password
                 </label>
                 <input 
@@ -214,9 +214,9 @@ export default function Register() {
                     errors.password ? 'border-red-500' : 'border-opacity-30'
                   }`}
                   style={{ 
-                    backgroundColor: 'rgba(248, 247, 229, 0.15)', 
-                    borderColor: errors.password ? '#ef4444' : 'rgba(248, 247, 229, 0.4)', 
-                    color: '#f8f7e5',
+                    backgroundColor: '#EBE9E1', 
+                    borderColor: errors.password ? '#ef4444' : '#EFB11D', 
+                    color: '#E43D12',
                     '--tw-placeholder-opacity': '0.7'
                   }}
                   placeholder="Create a password (min 6 characters)"
@@ -229,7 +229,7 @@ export default function Register() {
 
               {/* Confirm Password Field */}
               <div className="space-y-1.5 sm:space-y-2">
-                <label htmlFor="confirmPassword" className="text-sm font-medium block" style={{ color: '#f8f7e5' }}>
+                <label htmlFor="confirmPassword" className="text-sm font-medium block" style={{ color: '#E43D12' }}>
                   Confirm Password
                 </label>
                 <input 
@@ -242,9 +242,9 @@ export default function Register() {
                     errors.confirmPassword ? 'border-red-500' : 'border-opacity-30'
                   }`}
                   style={{ 
-                    backgroundColor: 'rgba(248, 247, 229, 0.15)', 
-                    borderColor: errors.confirmPassword ? '#ef4444' : 'rgba(248, 247, 229, 0.4)', 
-                    color: '#f8f7e5',
+                    backgroundColor: '#EBE9E1', 
+                    borderColor: errors.confirmPassword ? '#ef4444' : '#EFB11D', 
+                    color: '#E43D12',
                     '--tw-placeholder-opacity': '0.7'
                   }}
                   placeholder="Confirm your password"
@@ -281,12 +281,12 @@ export default function Register() {
 
             {/* Sign In Link */}
             <div className="mt-6 text-center">
-              <p className="text-sm" style={{ color: '#f8f7e5', opacity: 0.8 }}>
+              <p className="text-sm" style={{ color: '#E43D12', opacity: 0.8 }}>
                 Already have an account?{' '}
                 <Link 
                   to="/login" 
                   className="font-medium hover:underline transition-colors inline-block" 
-                  style={{ color: '#f8f7e5' }}
+                  style={{ color: '#E43D12' }}
                 >
                   Sign in here
                 </Link>

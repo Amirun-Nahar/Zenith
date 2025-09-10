@@ -25,7 +25,7 @@ export default function Navbar() {
           alt="Zenith Logo" 
           className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg transition-transform duration-300 hover:scale-110"
         />
-        <span className="font-semibold text-[#f8f7e5] text-sm sm:text-base">Zenith</span>
+        <span className="font-semibold text-[#E43D12] text-sm sm:text-base">Zenith</span>
       </Link>
       
       {/* Mobile Menu Button */}
@@ -81,7 +81,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-14 sm:top-16 left-0 right-0 bg-[#63786b]/95 backdrop-blur-lg border-b border-white/10 shadow-lg lg:hidden z-50">
+        <div className="absolute top-14 sm:top-16 left-0 right-0 bg-[#EBE9E1]/95 backdrop-blur-lg border-b border-white/10 shadow-lg lg:hidden z-50">
           <nav className="max-w-6xl mx-auto py-3 sm:py-4 px-3 sm:px-4">
             {isProtectedRoute ? (
               <div className="flex flex-col gap-1.5 sm:gap-2">

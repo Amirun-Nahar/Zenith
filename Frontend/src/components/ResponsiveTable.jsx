@@ -52,7 +52,7 @@ export function ResponsiveTable({
           <div className="flex items-center justify-between">
             <div className="flex-1">
               {columns[0] && (
-                <div className="font-medium text-[#f8f7e5]">
+                <div className="font-medium text-[#E43D12]">
                   {row[columns[0].key]}
                 </div>
               )}
@@ -64,7 +64,7 @@ export function ResponsiveTable({
             </div>
             <motion.div
               animate={{ rotate: expandedRow === rowIndex ? 180 : 0 }}
-              className="text-[#f8f7e5] opacity-60"
+              className="text-[#E43D12] opacity-60"
             >
               ▼
             </motion.div>
@@ -105,7 +105,7 @@ export function ResponsiveTable({
               <th
                 key={index}
                 className={`
-                  py-3 px-4 text-left text-sm font-medium text-[#f8f7e5] opacity-90
+                  py-3 px-4 text-left text-sm font-medium text-[#E43D12] opacity-90
                   ${sortable ? 'cursor-pointer hover:bg-white/5' : ''}
                 `}
                 onClick={() => handleSort(col.key)}
@@ -134,7 +134,7 @@ export function ResponsiveTable({
                 <td
                   key={colIndex}
                   className="py-3 px-4 text-sm"
-                  style={{ color: '#f8f7e5' }}
+                  style={{ color: '#E43D12' }}
                 >
                   {row[col.key]}
                 </td>

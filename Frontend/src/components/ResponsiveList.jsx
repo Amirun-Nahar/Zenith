@@ -69,7 +69,7 @@ export function ResponsiveList({
       </AnimatePresence>
 
       {items.length === 0 && (
-        <div className="text-center py-8 text-[#f8f7e5] opacity-60">
+        <div className="text-center py-8 text-[#E43D12] opacity-60">
           No items to display
         </div>
       )}

@@ -72,8 +72,8 @@ export default function VoiceNotes() {
   return (
     <div className="space-y-4 sm:space-y-6 p-4 sm:p-6">
       <div className="text-center">
-        <h2 className="text-xl sm:text-2xl font-bold mb-2" style={{ color: '#f8f7e5' }}>🎤 Voice Study Notes</h2>
-        <p className="text-sm sm:text-base" style={{ color: '#f8f7e5', opacity: 0.8 }}>Speak your thoughts and capture them instantly</p>
+        <h2 className="text-xl sm:text-2xl font-bold mb-2" style={{ color: '#E43D12' }}>🎤 Voice Study Notes</h2>
+        <p className="text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.8 }}>Speak your thoughts and capture them instantly</p>
       </div>
 
       {/* Recording Controls */}
@@ -99,15 +99,15 @@ export default function VoiceNotes() {
             onChange={(e) => setCurrentNote(e.target.value)}
             placeholder="Subject/Topic (optional)"
             className="input w-full text-sm sm:text-base"
-            style={{ color: '#f8f7e5' }}
+            style={{ color: '#E43D12' }}
           />
         </div>
 
         {/* Live Transcript */}
         {isRecording && (
           <div className="mb-4 p-3 sm:p-4 bg-white/5 rounded-lg border border-white/10">
-            <p className="text-xs sm:text-sm mb-2" style={{ color: '#f8f7e5', opacity: 0.7 }}>Live transcript:</p>
-            <p className="text-sm sm:text-base" style={{ color: '#f8f7e5' }}>{transcript || 'Listening...'}</p>
+            <p className="text-xs sm:text-sm mb-2" style={{ color: '#E43D12', opacity: 0.7 }}>Live transcript:</p>
+            <p className="text-sm sm:text-base" style={{ color: '#E43D12' }}>{transcript || 'Listening...'}</p>
           </div>
         )}
 
@@ -126,10 +126,10 @@ export default function VoiceNotes() {
 
       {/* Saved Notes */}
       <div className="card p-4 sm:p-6 border border-purple-500/30">
-        <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: '#f8f7e5' }}>📝 Saved Notes</h3>
+        <h3 className="text-lg sm:text-xl font-semibold mb-4" style={{ color: '#E43D12' }}>📝 Saved Notes</h3>
         
         {notes.length === 0 ? (
-          <p className="text-center py-6 sm:py-8 text-sm sm:text-base" style={{ color: '#f8f7e5', opacity: 0.7 }}>
+          <p className="text-center py-6 sm:py-8 text-sm sm:text-base" style={{ color: '#E43D12', opacity: 0.7 }}>
             No notes yet. Start recording to capture your thoughts!
           </p>
         ) : (
@@ -151,8 +151,8 @@ export default function VoiceNotes() {
                     🗑️ Delete
                   </button>
                 </div>
-                <p className="mb-2 text-sm sm:text-base" style={{ color: '#f8f7e5' }}>{note.text}</p>
-                <p className="text-xs" style={{ color: '#f8f7e5', opacity: 0.7 }}>{note.timestamp}</p>
+                <p className="mb-2 text-sm sm:text-base" style={{ color: '#E43D12' }}>{note.text}</p>
+                <p className="text-xs" style={{ color: '#E43D12', opacity: 0.7 }}>{note.timestamp}</p>
               </div>
             ))}
           </div>

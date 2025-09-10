@@ -62,13 +62,13 @@ export default function Focus() {
 
   return (
     <div className="space-y-5 sm:space-y-6">
-      <h1 className="text-xl sm:text-2xl font-semibold" style={{ color: '#f8f7e5' }}>Focus Mode</h1>
+      <h1 className="text-xl sm:text-2xl font-semibold" style={{ color: '#E43D12' }}>Focus Mode</h1>
       <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
         <div className="card p-4 sm:p-6 flex flex-col items-center">
-          <div className="text-xs sm:text-sm mb-2" style={{ color: '#f8f7e5', opacity: 0.8 }}>
+          <div className="text-xs sm:text-sm mb-2" style={{ color: '#E43D12', opacity: 0.8 }}>
             {mode === 'work' ? 'Work session' : mode === 'break' ? 'Break session' : 'Ready'}
           </div>
-          <div className="text-5xl sm:text-6xl font-bold tracking-tight" style={{ color: '#f8f7e5' }}>{mm}:{ss}</div>
+          <div className="text-5xl sm:text-6xl font-bold tracking-tight" style={{ color: '#E43D12' }}>{mm}:{ss}</div>
           <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
             <button 
               className="btn btn-primary w-full sm:w-auto text-base sm:text-sm py-2.5 sm:py-2 transition-transform duration-200 hover:-translate-y-0.5 active:translate-y-0" 
@@ -91,21 +91,21 @@ export default function Focus() {
           </div>
         </div>
         <div className="card p-4 sm:p-6">
-          <h2 className="text-lg font-medium mb-2" style={{ color: '#f8f7e5' }}>Productivity Pet</h2>
-          <p className="text-xs sm:text-sm mb-3 sm:mb-4" style={{ color: '#f8f7e5', opacity: 0.8 }}>
+          <h2 className="text-lg font-medium mb-2" style={{ color: '#E43D12' }}>Productivity Pet</h2>
+          <p className="text-xs sm:text-sm mb-3 sm:mb-4" style={{ color: '#E43D12', opacity: 0.8 }}>
             Completing sessions grows your plant.
           </p>
           <div 
             className="rounded-xl p-3 sm:p-4 flex items-end h-36 sm:h-48" 
-            style={{ backgroundColor: 'rgba(248, 247, 229, 0.1)' }}
+            style={{ backgroundColor: '#EBE9E1' }}
           >
             <div 
               className="mx-auto w-16 sm:w-24 rounded-b-full bg-emerald-400" 
               style={{ height: `${30 + growth * 0.6}px` }} 
             />
           </div>
-          <div className="text-xs sm:text-sm mt-2 sm:mt-3" style={{ color: '#f8f7e5', opacity: 0.8 }}>
-            Completed sessions: <span className="font-medium" style={{ color: '#f8f7e5' }}>{completed}</span>
+          <div className="text-xs sm:text-sm mt-2 sm:mt-3" style={{ color: '#E43D12', opacity: 0.8 }}>
+            Completed sessions: <span className="font-medium" style={{ color: '#E43D12' }}>{completed}</span>
           </div>
         </div>
       </div>

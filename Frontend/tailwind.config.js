@@ -7,8 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#63786b',
-        cream: '#f8f7e5',
+        primary: {
+          background: '#EBE9E1',
+          font: '#E43D12',
+          accent: '#EFB11D',
+        },
+        background: '#EBE9E1',
+        foreground: '#E43D12',
+        accent: '#EFB11D',
+        surface: '#EBE9E1',
+        border: '#EFB11D',
       },
       fontFamily: {
         sans: ['Merriweather', 'system-ui', 'sans-serif'],

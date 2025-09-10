@@ -83,21 +83,23 @@
 }
 
 :root {
-	--background: 99 120 107;   /* #63786b - matching the textured background */
-	--foreground: 248 247 229;  /* #f8f7e5 - cream text for textured background */
-	--muted: 200 195 180;       /* muted cream for subtle text */
-	--surface: 248 247 229;     /* cream for cards/surfaces */
-	--border: 200 195 180;      /* muted cream for borders */
-	--primary: 99 120 107;      /* #63786b for primary actions */
-	--ring: 99 120 107;         /* #63786b ring */
+	--background: 235 233 225;  /* #EBE9E1 - background */
+	--foreground: 228 61 18;    /* #E43D12 - font color */
+	--muted: 239 177 29;        /* #EFB11D - accent/muted */
+	--surface: 235 233 225;     /* #EBE9E1 - surface color */
+	--border: 239 177 29;       /* #EFB11D - border color */
+	--primary: 239 177 29;      /* #EFB11D - primary actions */
+	--ring: 239 177 29;         /* #EFB11D - ring color */
 }
 
 * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 html, body, #root { height: 100%; }
 body { 
+  background: #EBE9E1;
   color: rgb(var(--foreground)); 
   transition: background-color .2s ease, color .2s ease; 
   font-family: "Merriweather", serif; 
+  min-height: 100vh;
 }
 h1, h2, h3, h4 { font-family: "Merriweather", serif; }
 ::selection { background-color: rgba(20,184,166,0.2); color: rgb(var(--foreground)); }
@@ -108,9 +110,9 @@ a:hover { filter: brightness(1.1); }
 /* Modern button styles */
 .btn { 
 	@apply inline-flex items-center justify-center rounded-xl text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed; 
-	background: linear-gradient(135deg, rgba(99, 120, 107, 0.9) 0%, rgba(74, 92, 79, 0.9) 100%);
-	color: #f8f7e5; 
-	border: 1px solid rgba(248, 247, 229, 0.3);
+	background: #EFB11D;
+	color: #EBE9E1; 
+	border: 1px solid #EFB11D;
 	box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
 	backdrop-filter: blur(12px);
 	position: relative;
@@ -142,10 +144,10 @@ a:hover { filter: brightness(1.1); }
 }
 
 .btn:hover { 
-	background: linear-gradient(135deg, rgba(99, 120, 107, 1) 0%, rgba(74, 92, 79, 1) 100%);
+	background: #E43D12;
 	transform: translateY(-3px) scale(1.02);
 	box-shadow: 0 8px 25px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2);
-	border-color: rgba(248, 247, 229, 0.5);
+	border-color: #E43D12;
 }
 
 .btn:active {
@@ -154,23 +156,23 @@ a:hover { filter: brightness(1.1); }
 }
 
 .btn-primary { 
-	background: linear-gradient(135deg, #63786b 0%, #4a5c4f 100%);
-	color: #f8f7e5; 
-	border: 1px solid rgba(248, 247, 229, 0.4); 
-	box-shadow: 0 4px 15px rgba(99, 120, 107, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+	background: #EFB11D;
+	color: #EBE9E1; 
+	border: 1px solid #EFB11D; 
+	box-shadow: 0 4px 15px rgba(239, 177, 29, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
 }
 
 .btn-primary:hover { 
-	background: linear-gradient(135deg, #4a5c4f 0%, #3d4d40 100%);
+	background: #E43D12;
 	transform: translateY(-3px) scale(1.02);
-	box-shadow: 0 8px 25px rgba(99, 120, 107, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
-	border-color: rgba(248, 247, 229, 0.6);
+	box-shadow: 0 8px 25px rgba(228, 61, 18, 0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+	border-color: #E43D12;
 }
 
 /* Modern danger button */
 .btn-danger {
 	background: linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(220, 38, 38, 0.9) 100%);
-	color: #f8f7e5;
+	color: #EBE9E1;
 	border: 1px solid rgba(239, 68, 68, 0.3);
 	box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
 }
@@ -185,7 +187,7 @@ a:hover { filter: brightness(1.1); }
 /* Modern success button */
 .btn-success {
 	background: linear-gradient(135deg, rgba(34, 197, 94, 0.9) 0%, rgba(22, 163, 74, 0.9) 100%);
-	color: #f8f7e5;
+	color: #EBE9E1;
 	border: 1px solid rgba(34, 197, 94, 0.3);
 	box-shadow: 0 4px 15px rgba(34, 197, 94, 0.2), inset 0 1px 0 rgba(255,255,255,0.1);
 }
@@ -200,7 +202,7 @@ a:hover { filter: brightness(1.1); }
 .input, textarea, select { 
 	@apply w-full rounded-lg text-sm focus:outline-none focus:ring-2; 
 	border: 2px solid rgba(var(--border),0.3); 
-	background-color: rgba(31, 41, 55, 0.8); 
+	background-color: #EBE9E1; 
 	color: rgb(var(--foreground)); 
 	box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 	backdrop-filter: blur(10px);
@@ -231,14 +233,14 @@ a:hover { filter: brightness(1.1); }
 
 /* Date input specific styling */
 input[type="date"] {
-	background-color: rgba(99, 120, 107, 0.1) !important;
-	color: #f8f7e5 !important;
-	border: 2px solid rgba(248, 247, 229, 0.3) !important;
+	background-color: #EBE9E1 !important;
+	color: #E43D12 !important;
+	border: 2px solid #EFB11D !important;
 }
 
 input[type="date"]:focus {
-	border-color: rgba(248, 247, 229, 0.6) !important;
-	box-shadow: 0 0 0 3px rgba(248, 247, 229, 0.1) !important;
+	border-color: #EFB11D !important;
+	box-shadow: 0 0 0 3px rgba(239, 177, 29, 0.1) !important;
 }
 
 /* Date picker calendar styling */
@@ -253,13 +255,13 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
 
 .input:focus, textarea:focus, select:focus { 
 	border-color: rgb(var(--primary));
-	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-	background-color: rgba(31, 41, 55, 0.9);
+	box-shadow: 0 0 0 3px rgba(239, 177, 29, 0.2);
+	background-color: #EBE9E1;
 }
 
 .input:hover, textarea:hover, select:hover {
 	border-color: rgba(var(--border),0.5);
-	background-color: rgba(31, 41, 55, 0.9);
+	background-color: #EBE9E1;
 }
 
 /* Ensure select dropdowns are visible */
@@ -273,20 +275,20 @@ select {
 }
 
 select option {
-	background-color: #2d3748 !important;
-	color: #f8f7e5 !important;
+	background-color: #EBE9E1 !important;
+	color: #E43D12 !important;
 	padding: 12px 16px !important;
 	border: none !important;
 	font-size: 14px !important;
 }
 
 select option:hover {
-	background-color: #4a5568 !important;
+	background-color: #EFB11D !important;
 }
 
 select option:checked {
-	background-color: #63786b !important;
-	color: #f8f7e5 !important;
+	background-color: #EFB11D !important;
+	color: #EBE9E1 !important;
 }
 
 /* Textarea specific styling */
@@ -296,10 +298,10 @@ textarea {
 }
 
 .card { 
-	border: 1px solid rgba(248, 247, 229, 0.2); 
-	background-color: rgba(248, 247, 229, 0.1); 
+	border: 1px solid #EFB11D; 
+	background-color: #EBE9E1; 
 	@apply rounded-2xl shadow-lg backdrop-blur-md; 
-	color: #f8f7e5; 
+	color: #E43D12; 
 	box-shadow: 0 8px 32px rgba(0,0,0,0.2);
 }
 
